@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round #598解题报告 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMCodeforces" />
+  
+  
+  
+  
+  <meta name="description" content="全绿的第一场不好意思说是题解 就解题报告吧（天哪稳赚终于更博了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #598解题报告">
+<meta property="og:url" content="http://example.com/2019/11/06/Codeforces-Round-598%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="全绿的第一场不好意思说是题解 就解题报告吧（天哪稳赚终于更博了">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/lm/wallhaven-lm7x5p.jpg">
+<meta property="article:published_time" content="2019-11-06T05:35:17.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:40:56.175Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Codeforces">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/lm/wallhaven-lm7x5p.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Codeforces-Round-598解题报告" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/lm/wallhaven-lm7x5p.jpg" rel="gallery_ckke6wvfa000fd8umhfxydlp7 noopener">
+        <img src="https://w.wallhaven.cc/full/lm/wallhaven-lm7x5p.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Codeforces Round #598解题报告
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/11/06/Codeforces-Round-598%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" class="article-date">
+	  <time datetime="2019-11-06T05:35:17.000Z" itemprop="datePublished">November 6, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>全绿的第一场<br>不好意思说是题解 就解题报告吧<br>（天哪稳赚终于更博了</p>
+<a id="more"></a>
+<p>先反思一下 B这个傻逼暴力场上没调出来 真的弟弟<br>这场+11 我什么时候上蓝啊555<br>贪心场√</p>
+<h3 id="A-Payment-Without-Change"><a href="#A-Payment-Without-Change" class="headerlink" title="A: Payment Without Change"></a>A: Payment Without Change</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/A">题目链接</a><br>题意：有a个n b个1 问能不能凑到s<br>以为会炸int 赛后想了想好像也不会233 </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll a,b,n,s;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a*n+b&lt;s) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>),<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> x=min(a,s/n);</span><br><span class="line">    <span class="keyword">if</span>(x*n+b&gt;=s) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>),<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>),<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        scl(a); scl(b); scl(n); scl(s);</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="B-Minimize-the-Permutation"><a href="#B-Minimize-the-Permutation" class="headerlink" title="B: Minimize the Permutation"></a>B: Minimize the Permutation</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/B">题目链接</a><br>题意：给定一个1~n的排列 要操作最多n-1次相邻位交换且每个位置只能交换一次 使最终结果序列字典序最小 输出此序列<br>暴力莽 写得有点丑 一个活脱脱的&gt;号<br>我开始压行后就没写过这么丑的代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>],v[<span class="number">105</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n; sc(n); rep(i,<span class="number">1</span>,n+<span class="number">1</span>) sc(a[i]),v[i]=<span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">c</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line">        rep(i,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">            rep(j,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(a[j]==i)&#123;</span><br><span class="line">                    <span class="keyword">int</span> k=j;</span><br><span class="line">                    <span class="keyword">while</span>(k&gt;<span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(v[k]) <span class="keyword">break</span>;</span><br><span class="line">                        <span class="keyword">if</span>(a[k]&lt;a[k<span class="number">-1</span>])&#123;</span><br><span class="line">                            swap(a[k],a[k<span class="number">-1</span>]);</span><br><span class="line">                            c++; v[k]++; </span><br><span class="line">                        &#125; </span><br><span class="line">                        <span class="keyword">else</span> <span class="keyword">break</span>; k--;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(c==n) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        rep(i,<span class="number">1</span>,n+<span class="number">1</span>) pf(<span class="string">&quot;%d &quot;</span>,a[i]);</span><br><span class="line">        pf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-Platforms-Jumping"><a href="#C-Platforms-Jumping" class="headerlink" title="C: Platforms Jumping"></a>C: Platforms Jumping</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/C">题目链接</a><br>题意：一道河长n 有m个木板 第i个木板长c[i] 人一次可以跳d格 问这个人能否过河 能的话输出方案<br>贪心 判完YES后先让这个人一直跳尽量远</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1005</span>],s;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,k; sc(n); sc(m); sc(k);</span><br><span class="line">    rep(i,<span class="number">1</span>,m+<span class="number">1</span>) sc(a[i]),s+=a[i];</span><br><span class="line">    <span class="keyword">if</span>(n-s&gt;(m+<span class="number">1</span>)*(k<span class="number">-1</span>)) pf(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n1=n;</span><br><span class="line">        pf(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        n-=s; n++;</span><br><span class="line">        rep(i,<span class="number">1</span>,m+<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> t=min(k,n);</span><br><span class="line">            rep(j,<span class="number">0</span>,t<span class="number">-1</span>) pf(<span class="string">&quot;0 &quot;</span>);</span><br><span class="line">            rep(j,<span class="number">0</span>,a[i]) pf(<span class="string">&quot;%d &quot;</span>,i);</span><br><span class="line">            n-=t<span class="number">-1</span>;</span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="D-Binary-String-Minimizing"><a href="#D-Binary-String-Minimizing" class="headerlink" title="D: Binary String Minimizing"></a>D: Binary String Minimizing</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/D">题目链接</a><br>题意：给定一个长度为n的01串 问交换最多k次后字典序最小的串是什么<br>贪心 直接for一遍 不过还是写麻烦了233<br>k没开ll wa了一次 qswl</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;v;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n; ll k; sc(n); scl(k); scs(s); v.clear();</span><br><span class="line">        rep(i,<span class="number">0</span>,n) <span class="keyword">if</span>(s[i]==<span class="string">&#x27;0&#x27;</span>) v.push_back(i);</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">pos</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) <span class="keyword">if</span>(s[i]==<span class="string">&#x27;0&#x27;</span>) pos++; <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">        rep(i,<span class="number">0</span>,v.size())&#123;</span><br><span class="line">            <span class="keyword">if</span>(v[i]&lt;pos) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">int</span> t=min(<span class="number">1ll</span>*v[i]<span class="number">-1ll</span>*pos,k);</span><br><span class="line">            <span class="keyword">if</span>(t&lt;k) swap(s[v[i]],s[pos]);</span><br><span class="line">            <span class="keyword">else</span> swap(s[v[i]],s[v[i]-k]);</span><br><span class="line">            k-=t; pos++;</span><br><span class="line">            <span class="keyword">if</span>(k&lt;=<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        pf(<span class="string">&quot;%s\n&quot;</span>,s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="E-Yet-Another-Division-Into-Teams"><a href="#E-Yet-Another-Division-Into-Teams" class="headerlink" title="E: Yet Another Division Into Teams"></a>E: Yet Another Division Into Teams</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/E">题目链接</a><br>题意：n个人每个人能力为a[i] 一个队的差距指最大值减最小值 要把这些人划分成k个至少3人的队 希望每个队差异总和最小 求总和 队数 成员划分<br>是个dp 我看题解写的呜呜呜 没什么好说的 官方题解更好懂 wtcl</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;a[maxn];</span><br><span class="line"><span class="keyword">int</span> dp[maxn],t[maxn],r[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,cnt(<span class="number">0</span>); sc(n);</span><br><span class="line">    rep(i,<span class="number">0</span>,n) sc(a[i].first),a[i].second=i;</span><br><span class="line">    sort(a,a+n); rep(i,<span class="number">1</span>,n+<span class="number">1</span>) dp[i]=INF;</span><br><span class="line">    rep(i,<span class="number">0</span>,n) rep(j,<span class="number">3</span>,<span class="number">6</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i+j&gt;n) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(dp[i+j]&gt;dp[i]+a[i+j<span class="number">-1</span>].first-a[i].first)&#123;</span><br><span class="line">            dp[i+j]=dp[i]+a[i+j<span class="number">-1</span>].first-a[i].first;</span><br><span class="line">            r[i+j]=i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> now=n;</span><br><span class="line">    <span class="keyword">while</span>(now)&#123;</span><br><span class="line">        dep(i,now<span class="number">-1</span>,r[now]) t[a[i].second]=cnt;</span><br><span class="line">        cnt++; now=r[now];</span><br><span class="line">    &#125;</span><br><span class="line">    pf(<span class="string">&quot;%d %d\n&quot;</span>,dp[n],cnt);</span><br><span class="line">    rep(i,<span class="number">0</span>,n) pf(<span class="string">&quot;%d &quot;</span>,t[i]+<span class="number">1</span>); pf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="F-Equalizing-Two-Strings"><a href="#F-Equalizing-Two-Strings" class="headerlink" title="F: Equalizing Two Strings"></a>F: Equalizing Two Strings</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1256/problem/F">题目链接</a><br>题意：给定串s和t 每次可以在s和t中翻转长度相同的子串 问是否有可能使s和t相同<br>问施老师的 11-nb！<br>翻转长度为len的区间可以等价为多次相邻交换 将字符串换成递增的 需要逆序对次 如果逆序对数相同或者差为偶数（换两次等同于不变）则可以 如果有一个串的字母有两个以上 这就可以和这个字母不受限地交换 所以也可以<br>啊我说的啥啊</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> n,c[<span class="number">30</span>],d[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">char</span> s[maxn],t[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    int t1(0),t2(0);</span><br><span class="line">    rep(i,<span class="number">0</span>,n)&#123;</span><br><span class="line">        c[s[i]-<span class="string">&#x27;a&#x27;</span>]++,d[t[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        rep(j,s[i]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>,<span class="number">26</span>) t1+=c[j];</span><br><span class="line">        rep(j,t[i]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>,<span class="number">26</span>) t2+=d[j];</span><br><span class="line">    &#125;</span><br><span class="line">    rep(i,<span class="number">0</span>,<span class="number">26</span>) <span class="keyword">if</span>(c[i]!=d[i]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    rep(i,<span class="number">0</span>,<span class="number">26</span>) <span class="keyword">if</span>(c[i]&gt;=<span class="number">2</span>||d[i]&gt;=<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> (t1-t2)%<span class="number">2</span>==<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        sc(n); scs(s); scs(t);</span><br><span class="line">        mst(c,<span class="number">0</span>); mst(d,<span class="number">0</span>); </span><br><span class="line">        <span class="keyword">if</span>(solve()) <span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>); <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/" rel="tag">Codeforces</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/06/Codeforces-Round-604%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Codeforces Round #604解题报告
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/10/Java%E5%A4%A7%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java大数基本操作</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Payment-Without-Change"><span class="nav-number">1.</span> <span class="nav-text">A: Payment Without Change</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Minimize-the-Permutation"><span class="nav-number">2.</span> <span class="nav-text">B: Minimize the Permutation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Platforms-Jumping"><span class="nav-number">3.</span> <span class="nav-text">C: Platforms Jumping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Binary-String-Minimizing"><span class="nav-number">4.</span> <span class="nav-text">D: Binary String Minimizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Yet-Another-Division-Into-Teams"><span class="nav-number">5.</span> <span class="nav-text">E: Yet Another Division Into Teams</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Equalizing-Two-Strings"><span class="nav-number">6.</span> <span class="nav-text">F: Equalizing Two Strings</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

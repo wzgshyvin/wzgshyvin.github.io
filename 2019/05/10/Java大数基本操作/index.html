@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java大数基本操作 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMJava" />
+  
+  
+  
+  
+  <meta name="description" content="试着整理我看Java的过程嗷">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java大数基本操作">
+<meta property="og:url" content="http://example.com/2019/05/10/Java%E5%A4%A7%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="试着整理我看Java的过程嗷">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.ax1x.com/2020/03/02/3RXUBR.png">
+<meta property="article:published_time" content="2019-05-10T09:32:07.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:41:15.222Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/02/3RXUBR.png">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Java大数基本操作" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://s2.ax1x.com/2020/03/02/3RXUBR.png" rel="gallery_ckke6wvfe000kd8um9naq6pds noopener">
+        <img src="https://s2.ax1x.com/2020/03/02/3RXUBR.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Java大数基本操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/05/10/Java%E5%A4%A7%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
+	  <time datetime="2019-05-10T09:32:07.000Z" itemprop="datePublished">May 10, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>试着整理我看Java的过程嗷</p>
+<a id="more"></a>
+<p>一直知道Java大数nb 一直口嗨学Java 一直没动<br>机缘巧合之下 看到我rank10058 想快乐rank四位数 又懒得开新题 干脆Java搞个1042（求N!）<br>先搜题解一行行搜看懂什么意思后交了<br>我看的题解是BigDecimal 但这题BigInteger就行<br>我后来也BigInteger过了<br>下面就放BigInteger的ac代码了=。= </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigInteger; </span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">// 大数头文件和输入头文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 格式吧</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="comment">// Scanner输入 这应该就是一句标准格式吧233</span></span><br><span class="line">        <span class="keyword">while</span>(sc.hasNext())&#123;</span><br><span class="line">            <span class="comment">// while(有输入)</span></span><br><span class="line">            BigInteger n = sc.nextBigInteger(); <span class="comment">// 格式</span></span><br><span class="line">            BigInteger m=<span class="keyword">new</span> BigInteger(<span class="string">&quot;1&quot;</span>); <span class="comment">// 格式</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n.intValue();i++)&#123;</span><br><span class="line">                <span class="comment">// 一个挺c的for</span></span><br><span class="line">                m = m.multiply(BigInteger.valueOf(i));</span><br><span class="line">                <span class="comment">// 函数格式</span></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(m.toString());</span><br><span class="line">            <span class="comment">// 转成字符串输出 不过不转也行</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>真·一行一注释了！<br>看懂了就 快乐交题 ac++; rank=9949;<br>然后去魔改代码 用在线编译跑 整自闭了 还是下了IDEA配了环境 啊要死<br>不过当时没选好题 没选水的<br>然后搜索关键词：hdoj 大数 Java<br>get到hdoj上的Java大数水题 BigInteger的有<br>1002 // 两个大数相加<br>1047 // 大数累加<br>1715 // 求斐波那契 直接大数相加<br>1316 // 求区间有几个斐波那契数 大数加完for一遍<br>1297 // 递推+大数加法<br>然后 BigInteger基本函数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a, b;</span><br><span class="line">a = BigInteger.valueOf(b); <span class="comment">// a=b;</span></span><br><span class="line"><span class="keyword">int</span> c;</span><br><span class="line">a = BigInteger.valueOf(c); <span class="comment">// 类型转换</span></span><br><span class="line">String s = <span class="string">&quot;111&quot;</span>;</span><br><span class="line">a = BigInteger.valueOf(s); <span class="comment">// 运行后a==111;</span></span><br><span class="line">a = BigInteger(<span class="string">&quot;111&quot;</span>); <span class="comment">// 赋值常量</span></span><br><span class="line">a = sc.nextInteger(); <span class="comment">// 赋值输入</span></span><br><span class="line">a = a.add(b); <span class="comment">// a+=b;</span></span><br><span class="line">a = a.subtract(b); <span class="comment">// a-=b;</span></span><br><span class="line">a = a.multiply(b); <span class="comment">// a*=b;</span></span><br><span class="line">a = a.divide(b); <span class="comment">// a/=b;</span></span><br><span class="line"><span class="comment">/* 函数里的值也是BigInteger </span></span><br><span class="line"><span class="comment">如果是具体数值 格式：a.add(new BigInteger(&quot;1&quot;));</span></span><br><span class="line"><span class="comment">是前面变量 格式：a.add(BigInteger.valueOf(i));</span></span><br><span class="line"><span class="comment">特殊的 0 1 10 可以用BigInteger.ZERO\ONE\TEN;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">if</span>(a.compareTo(b)&gt;<span class="number">0</span>) System.out.println(a&gt;b); </span><br><span class="line"><span class="keyword">if</span>(a.compareTo(b)==<span class="number">0</span>) System.out.println(a==b);</span><br><span class="line"><span class="keyword">if</span>(a.compareTo(b)&lt;<span class="number">0</span>) System.out.println(a&lt;b);</span><br><span class="line">remainder(); mod(); <span class="comment">// 都是a%b</span></span><br><span class="line">pow(); gcd(); <span class="comment">// a^b 最大公约数</span></span><br><span class="line">abs(); negate(); <span class="comment">// 绝对值 相反数</span></span><br><span class="line">max(); min();</span><br><span class="line"><span class="comment">// 定义数组格式</span></span><br><span class="line">BigInteger array[]=<span class="keyword">new</span> BigInteger[maxn];</span><br></pre></td></tr></table></figure>
+<p>然后BigDecimal</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigDecimal; <span class="comment">// 头文件</span></span><br><span class="line">BigDecimal a, b;</span><br><span class="line">a = sc.nextBigDecimal();</span><br><span class="line">a = <span class="keyword">new</span> BigDecimal(<span class="number">111</span>);</span><br><span class="line">a = <span class="keyword">new</span> BigDecimal(b);</span><br><span class="line"><span class="comment">// 函数和BigInteger差不太多嗷 就有的语法有的小小区别</span></span><br><span class="line">System.out.println(a.stripTrailingZeros().toPlainString());</span><br><span class="line"><span class="comment">// 这个是 输出时去除多余末尾0 好用！！</span></span><br></pre></td></tr></table></figure>
+<p>hdoj BigDecimal水题<br>首先BigInteger的用BigDecimal应该也能做？<br>1753 // 加法<br>2054 // 比较<br>1063 // a^b问题<br>然后说点题外话？<br>配完Java环境后我发现我的hexo命令不能用辽 Google后跟着教程是 在高级系统设置中的环境变量的PATH加了node_modules\.bin和nodejs的路径 就可以辣！</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/06/Codeforces-Round-598%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Codeforces Round #598解题报告
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/18/Little-Sub-and-Enigma%E9%A2%98%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">杭师校赛I题-Little Sub and Enigma AC代码</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

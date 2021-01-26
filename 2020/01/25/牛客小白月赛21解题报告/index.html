@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>牛客小白月赛21解题报告 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMNowcoder" />
+  
+  
+  
+  
+  <meta name="description" content="namo 怎么ak一场小白月赛这么难啊">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛客小白月赛21解题报告">
+<meta property="og:url" content="http://example.com/2020/01/25/%E7%89%9B%E5%AE%A2%E5%B0%8F%E7%99%BD%E6%9C%88%E8%B5%9B21%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="namo 怎么ak一场小白月赛这么难啊">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/2e/wallhaven-2e56em.png">
+<meta property="article:published_time" content="2020-01-25T05:56:31.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:43:18.842Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Nowcoder">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/2e/wallhaven-2e56em.png">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-牛客小白月赛21解题报告" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/2e/wallhaven-2e56em.png" rel="gallery_ckke6wvg9003sd8umh9w62ld4 noopener">
+        <img src="https://w.wallhaven.cc/full/2e/wallhaven-2e56em.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      牛客小白月赛21解题报告
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/01/25/%E7%89%9B%E5%AE%A2%E5%B0%8F%E7%99%BD%E6%9C%88%E8%B5%9B21%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" class="article-date">
+	  <time datetime="2020-01-25T05:56:31.000Z" itemprop="datePublished">January 25, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>namo 怎么ak一场小白月赛这么难啊</p>
+<a id="more"></a>
+<p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3947">比赛链接</a><br>除了代码短度一无是处了</p>
+<h4 id="Audio"><a href="#Audio" class="headerlink" title="Audio"></a>Audio</h4><p>找外心</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">double</span> x1,y11,x2,y2,x3,y3,x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x1&gt;&gt;y11&gt;&gt;x2&gt;&gt;y2&gt;&gt;x3&gt;&gt;y3;</span><br><span class="line">    <span class="keyword">double</span> A1=<span class="number">2</span>*(x2-x1),B1=<span class="number">2</span>*(y2-y11),C1=x2*x2+y2*y2-x1*x1-y11*y11;</span><br><span class="line">    <span class="keyword">double</span> A2=<span class="number">2</span>*(x3-x2),B2=<span class="number">2</span>*(y3-y2),C2=x3*x3+y3*y3-x2*x2-y2*y2;</span><br><span class="line">    x=((C1*B2)-(C2*B1))/((A1*B2)-(A2*B1));</span><br><span class="line">    y=((A1*C2)-(A2*C1))/((A1*B2)-(A2*B1));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.3lf %.3lf\n&quot;</span>,x,y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Bits"><a href="#Bits" class="headerlink" title="Bits"></a>Bits</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,t[<span class="number">5</span>],s[<span class="number">15</span>][<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">    rep(i,<span class="number">1</span>,<span class="number">3</span>*(<span class="number">2</span>*n+<span class="number">1</span>)+<span class="number">5</span>) <span class="built_in">putchar</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>); dep(i,n+<span class="number">1</span>,<span class="number">1</span>)&#123;</span><br><span class="line">        rep(j,<span class="number">1</span>,<span class="number">4</span>)&#123;</span><br><span class="line">            rep(k,<span class="number">0</span>,n-s[i][j]+<span class="number">1</span>) <span class="built_in">putchar</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">            rep(k,<span class="number">0</span>,s[i][j]) <span class="built_in">putchar</span>(<span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">            <span class="built_in">putchar</span>(s[i][j]?<span class="string">&#x27;*&#x27;</span>:<span class="string">&#x27;|&#x27;</span>);</span><br><span class="line">            rep(k,<span class="number">0</span>,s[i][j]) <span class="built_in">putchar</span>(<span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">            rep(k,<span class="number">0</span>,n-s[i][j]) <span class="built_in">putchar</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">        &#125; <span class="built_in">putchar</span>(<span class="string">&#x27;.&#x27;</span>); <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    s[++t[b]][b]=s[t[a]][a]; s[t[a]--][a]=<span class="number">0</span>;</span><br><span class="line">    rep(i,<span class="number">1</span>,<span class="number">3</span>*(<span class="number">2</span>*n+<span class="number">1</span>)+<span class="number">5</span>) <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>); print();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>) <span class="keyword">return</span> move(a,c);</span><br><span class="line">    solve(n<span class="number">-1</span>,a,c,b); move(a,c);</span><br><span class="line">    solve(n<span class="number">-1</span>,b,a,c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n; rep(i,<span class="number">1</span>,n+<span class="number">1</span>) s[++t[<span class="number">1</span>]][<span class="number">1</span>]=n-i+<span class="number">1</span>;</span><br><span class="line">    print(); solve(n,<span class="number">1</span>,<span class="number">2</span>+(n&amp;<span class="number">1</span>),<span class="number">3</span>-(n&amp;<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Channels"><a href="#Channels" class="headerlink" title="Channels"></a>Channels</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll a,b; <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b) <span class="built_in">cout</span>&lt;&lt;b/<span class="number">60</span>*<span class="number">50</span>+min(<span class="number">50ll</span>,b%<span class="number">60</span>)-(a<span class="number">-1</span>)/<span class="number">60</span>*<span class="number">50</span>-min(<span class="number">50ll</span>,(a<span class="number">-1</span>)%<span class="number">60</span>)&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="DDoS"><a href="#DDoS" class="headerlink" title="DDoS"></a>DDoS</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> in[maxn],vis[maxn];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vv[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m; sc(n); sc(m); <span class="keyword">while</span>(m--)&#123;</span><br><span class="line">        <span class="keyword">int</span> u,v,w; sc(u); sc(v); sc(w);</span><br><span class="line">        vv[u].push_back(v); in[v]++;</span><br><span class="line">    &#125; vis[<span class="number">1</span>]=<span class="number">1</span>; <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q; q.push(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> fr=q.front(); q.pop(); <span class="keyword">for</span>(<span class="keyword">int</span> t:vv[fr])&#123;</span><br><span class="line">            vis[t]=(vis[t]+vis[fr])%<span class="number">20010905</span>;</span><br><span class="line">            <span class="keyword">if</span>(!--in[t]) q.push(t); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125; pf(<span class="string">&quot;%d\n&quot;</span>,vis[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Exams"><a href="#Exams" class="headerlink" title="Exams"></a>Exams</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    int n; double a1(0),a2(0); std::cin&gt;&gt;n; while(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> a; <span class="keyword">double</span> b,c,d,e,f,g,h; <span class="built_in">std</span>::<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d&gt;&gt;e&gt;&gt;f&gt;&gt;g&gt;&gt;h;</span><br><span class="line">        <span class="keyword">if</span>(a==<span class="number">2</span>) <span class="keyword">continue</span>; a1+=b*(<span class="keyword">int</span>)(c*d+e*f+g*h+<span class="number">0.5</span>); a2+=b;</span><br><span class="line">    &#125; <span class="built_in">printf</span>(<span class="string">&quot;%.2lf&quot;</span>,a1/a2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Fool-Problem"><a href="#Fool-Problem" class="headerlink" title="Fool Problem"></a>Fool Problem</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s; <span class="built_in">cin</span>&gt;&gt;s; <span class="built_in">puts</span>((s[s.size()<span class="number">-1</span>]-<span class="string">&#x27;0&#x27;</span>)&amp;<span class="number">1</span>?<span class="string">&quot;-1&quot;</span>:<span class="string">&quot;1&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Game"><a href="#Game" class="headerlink" title="Game"></a>Game</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,cnt(<span class="number">0</span>); <span class="built_in">std</span>::<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    rep(i,<span class="number">2</span>,n+<span class="number">1</span>) <span class="keyword">while</span>(n%i==<span class="number">0</span>) n/=i,cnt++;</span><br><span class="line">    <span class="built_in">puts</span>(cnt&amp;<span class="number">1</span>?<span class="string">&quot;Nancy&quot;</span>:<span class="string">&quot;Johnson&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="”Happy-New-Year-“"><a href="#”Happy-New-Year-“" class="headerlink" title="”Happy New Year!“"></a>”Happy New Year!“</h4><p>php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Happy New Year!&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="I-love-you"><a href="#I-love-you" class="headerlink" title="I love you"></a>I love you</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>],mod=<span class="number">20010905</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s,q=<span class="string">&quot; iloveyou&quot;</span>; a[<span class="number">0</span>]=<span class="number">1</span>; <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">    <span class="keyword">int</span> len=s.length(); rep(i,<span class="number">0</span>,len)&#123;</span><br><span class="line">        s[i]=<span class="built_in">tolower</span>(s[i]);</span><br><span class="line">        rep(j,<span class="number">1</span>,<span class="number">9</span>) a[j]=(a[j]+(s[i]==q[j])*a[j<span class="number">-1</span>])%mod;</span><br><span class="line">    &#125; <span class="built_in">cout</span>&lt;&lt;a[<span class="number">8</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Jelly"><a href="#Jelly" class="headerlink" title="Jelly"></a>Jelly</h4><p>我真的服了 这都能wa</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> mp[<span class="number">105</span>][<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="keyword">int</span> dir[<span class="number">6</span>][<span class="number">3</span>]=&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> x,y,z,cnt;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span> n,cnt;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">105</span>][<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="built_in">queue</span>&lt;node&gt;q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">    q.push(node&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>&#125;); vis[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]++; <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        node fr=q.front(); q.pop(); rep(i,<span class="number">0</span>,<span class="number">6</span>)&#123;</span><br><span class="line">            node c=fr; c.x+=dir[i][<span class="number">0</span>],c.y+=dir[i][<span class="number">1</span>],c.z+=dir[i][<span class="number">2</span>];</span><br><span class="line">            <span class="keyword">if</span>(c.x&lt;<span class="number">0</span>||c.y&lt;<span class="number">0</span>||c.z&lt;<span class="number">0</span>||c.x&gt;=n||c.y&gt;=n||c.z&gt;=n) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(vis[c.x][c.y][c.z]||mp[c.x][c.y][c.z]==<span class="string">&#x27;*&#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            vis[c.x][c.y][c.z]++; c.cnt++; q.push(c);</span><br><span class="line">            <span class="keyword">if</span>(c.x==n<span class="number">-1</span>&amp;&amp;c.y==n<span class="number">-1</span>&amp;&amp;c.z==n<span class="number">-1</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c.cnt,<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>,<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n; rep(i,<span class="number">0</span>,n) rep(j,<span class="number">0</span>,n) <span class="built_in">cin</span>&gt;&gt;mp[i][j]; bfs();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nowcoder/" rel="tag">Nowcoder</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/06/PTA-L1-064%E4%BC%B0%E5%80%BC%E4%B8%80%E4%BA%BF%E7%9A%84AI%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PTA L1-064估值一亿的AI核心代码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/18/Wannafly%20Winter%20Camp%202020-Day7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Wannafly Winter Camp 2020-Day7</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Audio"><span class="nav-number">1.</span> <span class="nav-text">Audio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bits"><span class="nav-number">2.</span> <span class="nav-text">Bits</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Channels"><span class="nav-number">3.</span> <span class="nav-text">Channels</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DDoS"><span class="nav-number">4.</span> <span class="nav-text">DDoS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exams"><span class="nav-number">5.</span> <span class="nav-text">Exams</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fool-Problem"><span class="nav-number">6.</span> <span class="nav-text">Fool Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Game"><span class="nav-number">7.</span> <span class="nav-text">Game</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%80%9DHappy-New-Year-%E2%80%9C"><span class="nav-number">8.</span> <span class="nav-text">”Happy New Year!“</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-love-you"><span class="nav-number">9.</span> <span class="nav-text">I love you</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jelly"><span class="nav-number">10.</span> <span class="nav-text">Jelly</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces 7D. Palindrome Degree | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMCodeforces" />
+  
+  
+  
+  
+  <meta name="description" content="最近在写string 这题manacher和hash各写了一遍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces 7D. Palindrome Degree">
+<meta property="og:url" content="http://example.com/2020/03/11/Codeforces-7D/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="最近在写string 这题manacher和hash各写了一遍">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/5w/wallhaven-5wqmj8.jpg">
+<meta property="article:published_time" content="2020-03-11T05:27:40.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:39:08.071Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Codeforces">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/5w/wallhaven-5wqmj8.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Codeforces-7D" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/5w/wallhaven-5wqmj8.jpg" rel="gallery_ckke6wvf8000ad8umcovl57oi noopener">
+        <img src="https://w.wallhaven.cc/full/5w/wallhaven-5wqmj8.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Codeforces 7D. Palindrome Degree
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/03/11/Codeforces-7D/" class="article-date">
+	  <time datetime="2020-03-11T05:27:40.000Z" itemprop="datePublished">March 11, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在写string 这题manacher和hash各写了一遍</p>
+<a id="more"></a>
+<p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/7/problem/D">题目链接</a><br>乍一看以为是pam 后来发现pam写不了233 不然要写三种的<br>只要根据dp[i]=dp[i/2]+1;来推就行了 思路还是比较清晰的qwq</p>
+<h4 id="manacher"><a href="#manacher" class="headerlink" title="manacher"></a>manacher</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn],ma[<span class="number">2</span>*maxn];</span><br><span class="line"><span class="keyword">int</span> che[<span class="number">2</span>*maxn],ww[<span class="number">2</span>*maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">manacher</span><span class="params">(<span class="keyword">char</span>* s,<span class="keyword">int</span> len0)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len=<span class="number">0</span>; ma[len++]=<span class="string">&#x27;$&#x27;</span>; ma[len++]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">    rep(i,<span class="number">0</span>,len0) ma[len++]=s[i],ma[len++]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">    ma[len]=<span class="number">0</span>; <span class="keyword">int</span> maxx=<span class="number">0</span>,num=<span class="number">0</span>;</span><br><span class="line">    rep(i,<span class="number">0</span>,len)&#123;</span><br><span class="line">        che[i]=maxx&gt;i?min(che[<span class="number">2</span>*num-i],maxx-i):<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(ma[i+che[i]]==ma[i-che[i]]) che[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+che[i]&gt;maxx) maxx=i+che[i],num=i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="function">ll <span class="title">ans</span><span class="params">(<span class="number">0</span>)</span></span>; rep(i,<span class="number">1</span>,len+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">2</span>,r=<span class="number">2</span>*i,m=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(che[m]*<span class="number">2</span>&gt;r-l+<span class="number">1</span>) ww[r]=ww[m<span class="number">-1</span>-(m<span class="number">-1</span>)%<span class="number">2</span>]+<span class="number">1</span>;</span><br><span class="line">        ans+=ww[r];</span><br><span class="line">    &#125; pf(<span class="string">&quot;%lld\n&quot;</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    scs(s); <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s);</span><br><span class="line">    manacher(s,len); solve(len);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h4><p>我的hash常数很大啊 抠抠才过<br>还是seed和mod不公开了吧qwq</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn]; <span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">haash</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> seed,mod,hs[maxn],bas[maxn]; <span class="comment">// hs看情况开</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        bas[<span class="number">0</span>]=<span class="number">1</span>; rep(i,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">            bas[i]=<span class="number">1ll</span>*bas[i<span class="number">-1</span>]*seed%mod;</span><br><span class="line">            hs[i]=<span class="number">1ll</span>*hs[i<span class="number">-1</span>]*seed%mod+s[i];</span><br><span class="line">            <span class="keyword">if</span>(hs[i]&gt;=mod) hs[i]-=mod;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getsum</span><span class="params">(<span class="keyword">int</span> *h,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=h[r]<span class="number">-1ll</span>*h[l<span class="number">-1</span>]*bas[r-l+<span class="number">1</span>]%mod;</span><br><span class="line">        <span class="keyword">if</span>(res&lt;<span class="number">0</span>) res+=mod;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;hh[<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hash_init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    hh[<span class="number">0</span>].seed=?,hh[<span class="number">0</span>].mod=?; hh[<span class="number">0</span>].init();</span><br><span class="line">    reverse(s+<span class="number">1</span>,s+n+<span class="number">1</span>);</span><br><span class="line">    hh[<span class="number">1</span>].seed=?,hh[<span class="number">1</span>].mod=?; hh[<span class="number">1</span>].init();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> ww[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>; ww[<span class="number">1</span>]=<span class="number">1</span>; rep(i,<span class="number">2</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(hh[<span class="number">0</span>].getsum(hh[<span class="number">0</span>].hs,<span class="number">1</span>,i/<span class="number">2</span>)==hh[<span class="number">1</span>].getsum(hh[<span class="number">1</span>].hs,n-i+<span class="number">1</span>,n-(i+<span class="number">1</span>)/<span class="number">2</span>))</span><br><span class="line">            ww[i]=ww[i/<span class="number">2</span>]+<span class="number">1</span>; ans+=ww[i];</span><br><span class="line">    &#125; pf(<span class="string">&quot;%lld\n&quot;</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    scs(s+<span class="number">1</span>); n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    hash_init(); solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/" rel="tag">Codeforces</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/03/17/Codeforces-19C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Codeforces 19C. Deletion of Repeats
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/02/Codeforces-Round-625%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Codeforces Round #625解题报告</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#manacher"><span class="nav-number">1.</span> <span class="nav-text">manacher</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hash"><span class="nav-number">2.</span> <span class="nav-text">hash</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

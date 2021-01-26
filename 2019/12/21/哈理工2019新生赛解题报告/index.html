@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>哈理工2019新生赛解题报告 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMNowcoder" />
+  
+  
+  
+  
+  <meta name="description" content="没啥好写的但毕竟也是ak了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="哈理工2019新生赛解题报告">
+<meta property="og:url" content="http://example.com/2019/12/21/%E5%93%88%E7%90%86%E5%B7%A52019%E6%96%B0%E7%94%9F%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="没啥好写的但毕竟也是ak了">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/4g/wallhaven-4glrje.jpg">
+<meta property="article:published_time" content="2019-12-21T07:30:28.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:43:12.585Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Nowcoder">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/4g/wallhaven-4glrje.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-哈理工2019新生赛解题报告" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/4g/wallhaven-4glrje.jpg" rel="gallery_ckke6wvfw0024d8umehb43l7o noopener">
+        <img src="https://w.wallhaven.cc/full/4g/wallhaven-4glrje.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      哈理工2019新生赛解题报告
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/12/21/%E5%93%88%E7%90%86%E5%B7%A52019%E6%96%B0%E7%94%9F%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" class="article-date">
+	  <time datetime="2019-12-21T07:30:28.000Z" itemprop="datePublished">December 21, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>没啥好写的但毕竟也是ak了</p>
+<a id="more"></a>
+<p>来看压行小天才的表演</p>
+<h3 id="A-会长的烦心事"><a href="#A-会长的烦心事" class="headerlink" title="A: 会长的烦心事"></a>A: 会长的烦心事</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/A">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> len[<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">change</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;l&#x27;</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;e&#x27;</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;a&#x27;</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;g&#x27;</span>) <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;u&#x27;</span>) <span class="keyword">return</span> <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;o&#x27;</span>) <span class="keyword">return</span> <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;f&#x27;</span>) <span class="keyword">return</span> <span class="number">6</span>;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">7</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s; <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;s)&#123;</span><br><span class="line">        <span class="keyword">int</span> n=s.length(); rep(i,<span class="number">0</span>,<span class="number">7</span>) len[i]=<span class="number">0</span>;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) len[change(s[i])]++;</span><br><span class="line">        len[<span class="number">0</span>]/=<span class="number">2</span>; len[<span class="number">1</span>]/=<span class="number">2</span>; <span class="keyword">int</span> mn=<span class="number">1e9</span>;</span><br><span class="line">        rep(i,<span class="number">0</span>,<span class="number">7</span>) mn=min(mn,len[i]); <span class="built_in">cout</span>&lt;&lt;mn&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="B-快来秒掉我！"><a href="#B-快来秒掉我！" class="headerlink" title="B: 快来秒掉我！"></a>B: 快来秒掉我！</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/B">题目链接</a><br>嗯！第一次写php（逃</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Do</span> you want to play ACM?(yes\no)</span><br></pre></td></tr></table></figure>
+<h3 id="C-素数圆环"><a href="#C-素数圆环" class="headerlink" title="C: 素数圆环"></a>C: 素数圆环</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/C">题目链接</a><br>暴搜</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,cas,ans[<span class="number">25</span>],vis[<span class="number">25</span>];</span><br><span class="line"><span class="keyword">int</span> p[<span class="number">25</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;n&amp;&amp;p[ans[n]+<span class="number">1</span>]) rep(i,<span class="number">1</span>,n+<span class="number">1</span>) </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans[i]&lt;&lt;(<span class="keyword">char</span>)(i==n?<span class="string">&#x27;\n&#x27;</span>:<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span>(x&lt;=n) rep(i,<span class="number">2</span>,n+<span class="number">1</span>) <span class="keyword">if</span>(!vis[i]&amp;&amp;p[i+ans[x<span class="number">-1</span>]])&#123;</span><br><span class="line">        vis[i]=<span class="number">1</span>; ans[x]=i; dfs(x+<span class="number">1</span>); vis[i]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;Case &quot;</span>&lt;&lt;++cas&lt;&lt;<span class="string">&quot;:\n&quot;</span>; ans[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) dfs(<span class="number">2</span>); <span class="built_in">cout</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&amp;&amp;n) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="D-电脑磨损程度"><a href="#D-电脑磨损程度" class="headerlink" title="D: 电脑磨损程度"></a>D: 电脑磨损程度</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/D">题目链接</a><br>委屈，它卡cout精度</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(n&lt;=<span class="number">4</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;<span class="number">10</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">int</span> r=n%<span class="number">8</span>,c=n/<span class="number">8</span>; <span class="keyword">if</span>(!r) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(r==<span class="number">1</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>+<span class="number">2</span>&lt;&lt;<span class="string">&quot;.4&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(r==<span class="number">2</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>+<span class="number">4</span>&lt;&lt;<span class="string">&quot;.8&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(r==<span class="number">3</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>+<span class="number">7</span>&lt;&lt;<span class="string">&quot;.2&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(r==<span class="number">4</span>) <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>+<span class="number">9</span>&lt;&lt;<span class="string">&quot;.6&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;c*<span class="number">18</span>+<span class="number">10</span>+(r<span class="number">-4</span>)*<span class="number">2</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">     <span class="keyword">int</span> n; <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&amp;&amp;n) solve(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="E-ACMer如何拯救小学生"><a href="#E-ACMer如何拯救小学生" class="headerlink" title="E: ACMer如何拯救小学生"></a>E: ACMer如何拯救小学生</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/E">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">cin</span>&gt;&gt;(_); getchar(); <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        getline(<span class="built_in">cin</span>,s); <span class="keyword">int</span> n=s.length();</span><br><span class="line">        <span class="built_in">string</span> t=<span class="string">&quot;&quot;</span>; t+=<span class="built_in">toupper</span>(s[<span class="number">0</span>]); rep(i,<span class="number">1</span>,n)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i<span class="number">-1</span>]==<span class="string">&#x27; &#x27;</span>&amp;&amp;s[i]!=<span class="string">&#x27; &#x27;</span>) t+=<span class="built_in">toupper</span>(s[i]);</span><br><span class="line">        &#125; <span class="built_in">cout</span>&lt;&lt;t&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="F-当会长和一群手贱的耗子在电梯相遇"><a href="#F-当会长和一群手贱的耗子在电梯相遇" class="headerlink" title="F: 当会长和一群手贱的耗子在电梯相遇"></a>F: 当会长和一群手贱的耗子在电梯相遇</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/F">题目链接</a><br>算因数个数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(ll i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(ll n)</span></span>&#123;</span><br><span class="line">     <span class="function">ll <span class="title">cnt</span><span class="params">(<span class="number">0</span>)</span></span>; rep(i,<span class="number">1</span>,<span class="number">1e8</span>)&#123;</span><br><span class="line">          <span class="keyword">if</span>(i*i&gt;n) <span class="keyword">break</span>; <span class="keyword">if</span>(n%i==<span class="number">0</span>) cnt+=i*i==n?<span class="number">1</span>:<span class="number">2</span>;</span><br><span class="line">     &#125; <span class="built_in">puts</span>(cnt&amp;<span class="number">1</span>?<span class="string">&quot;Goddess,I&#x27;m coming~~~&quot;</span>:<span class="string">&quot;Farewell~&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">     ll n; <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&amp;&amp;n) solve(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="G-ACMer分奖金"><a href="#G-ACMer分奖金" class="headerlink" title="G: ACMer分奖金"></a>G: ACMer分奖金</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/G">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">cin</span>&gt;&gt;_; <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        <span class="keyword">int</span> num[<span class="number">10</span>]; rep(i,<span class="number">0</span>,<span class="number">6</span>) num[i]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n; <span class="built_in">cin</span>&gt;&gt;n; rep(i,<span class="number">0</span>,n)&#123;</span><br><span class="line">            <span class="keyword">int</span> a; <span class="built_in">cin</span>&gt;&gt;a; num[<span class="number">0</span>]+=a/<span class="number">100</span>; a%=<span class="number">100</span>;</span><br><span class="line">            num[<span class="number">1</span>]+=a/<span class="number">50</span>; a%=<span class="number">50</span>; num[<span class="number">2</span>]+=a/<span class="number">20</span>; a%=<span class="number">20</span>;</span><br><span class="line">            num[<span class="number">3</span>]+=a/<span class="number">10</span>; a%=<span class="number">10</span>; num[<span class="number">4</span>]+=a/<span class="number">5</span>; a%=<span class="number">5</span>; num[<span class="number">5</span>]+=a;</span><br><span class="line">        &#125; <span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="number">0</span>)</span></span>; rep(i,<span class="number">0</span>,<span class="number">6</span>) sum+=num[i];</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="H-放轻松"><a href="#H-放轻松" class="headerlink" title="H: 放轻松"></a>H: 放轻松</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/H">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">double</span> a[<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) <span class="built_in">cin</span>&gt;&gt;a[i]; sort(a,a+n);</span><br><span class="line">        rep(i,<span class="number">0</span>,n) <span class="built_in">printf</span>(<span class="string">&quot;%.2lf &quot;</span>,a[i]); <span class="built_in">cout</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="I-ACM协会晚会"><a href="#I-ACM协会晚会" class="headerlink" title="I: ACM协会晚会"></a>I: ACM协会晚会</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/I">题目链接</a><br>组合数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e18</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(!b)&#123; x=<span class="number">1</span>,y=<span class="number">0</span>; <span class="keyword">return</span>; &#125;</span><br><span class="line">     <span class="keyword">else</span>&#123; exgcd(b,a%b,y,x); y-=(a/b)*x; <span class="keyword">return</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s&gt;x-s) s=x-s;</span><br><span class="line">    ll ans=<span class="number">1</span>,tmp=<span class="number">1</span>,xx,y;</span><br><span class="line">    rep(i,<span class="number">1</span>,s+<span class="number">1</span>) ans=ans*(x-i+<span class="number">1</span>)%mod,tmp=tmp*i%mod;</span><br><span class="line">    exgcd(tmp,mod,xx,y); ans=(ans*xx%mod+mod)%mod;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m; <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m; <span class="keyword">if</span>(m&gt;n) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">cout</span>&lt;&lt;C(m,n)&lt;&lt;<span class="string">&#x27;\n&#x27;</span>,<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">cin</span>&gt;&gt;_; <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="J-会长爱旅游"><a href="#J-会长爱旅游" class="headerlink" title="J: 会长爱旅游"></a>J: 会长爱旅游</h3><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/3474/J">题目链接</a><br>bfs</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vv[maxn];</span><br><span class="line"><span class="keyword">int</span> vis[maxn],ans[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q; q.push(s); <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> fr=q.front(); q.pop(); <span class="keyword">for</span>(<span class="keyword">int</span> t:vv[fr])</span><br><span class="line">        <span class="keyword">if</span>(!vis[t]) vis[t]=<span class="number">1</span>,ans[t]=fr,q.push(t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">cin</span>&gt;&gt;_; <span class="keyword">while</span>(_--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n,s; <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s; mst(vv,<span class="number">0</span>); rep(i,<span class="number">1</span>,n)&#123;</span><br><span class="line">            <span class="keyword">int</span> x,y; <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y; vv[x].push_back(y); vv[y].push_back(x);</span><br><span class="line">        &#125; ans[s]=<span class="number">-1</span>; vis[s]=<span class="number">1</span>; bfs(s); </span><br><span class="line">        rep(i,<span class="number">1</span>,n+<span class="number">1</span>) <span class="built_in">cout</span>&lt;&lt;ans[i]&lt;&lt;(<span class="keyword">char</span>)(i==n?<span class="string">&#x27;\n&#x27;</span>:<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>压行选手是这么牛逼的</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nowcoder/" rel="tag">Nowcoder</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/31/2019%E6%B5%81%E6%B0%B4%E8%B4%A6%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019流水账总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/15/%E4%BD%99%E5%BF%83graffiti%E4%BD%9C%E5%93%81%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">余心往期graffiti归档</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-%E4%BC%9A%E9%95%BF%E7%9A%84%E7%83%A6%E5%BF%83%E4%BA%8B"><span class="nav-number">1.</span> <span class="nav-text">A: 会长的烦心事</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-%E5%BF%AB%E6%9D%A5%E7%A7%92%E6%8E%89%E6%88%91%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">B: 快来秒掉我！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E7%B4%A0%E6%95%B0%E5%9C%86%E7%8E%AF"><span class="nav-number">3.</span> <span class="nav-text">C: 素数圆环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-%E7%94%B5%E8%84%91%E7%A3%A8%E6%8D%9F%E7%A8%8B%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">D: 电脑磨损程度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-ACMer%E5%A6%82%E4%BD%95%E6%8B%AF%E6%95%91%E5%B0%8F%E5%AD%A6%E7%94%9F"><span class="nav-number">5.</span> <span class="nav-text">E: ACMer如何拯救小学生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-%E5%BD%93%E4%BC%9A%E9%95%BF%E5%92%8C%E4%B8%80%E7%BE%A4%E6%89%8B%E8%B4%B1%E7%9A%84%E8%80%97%E5%AD%90%E5%9C%A8%E7%94%B5%E6%A2%AF%E7%9B%B8%E9%81%87"><span class="nav-number">6.</span> <span class="nav-text">F: 当会长和一群手贱的耗子在电梯相遇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G-ACMer%E5%88%86%E5%A5%96%E9%87%91"><span class="nav-number">7.</span> <span class="nav-text">G: ACMer分奖金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H-%E6%94%BE%E8%BD%BB%E6%9D%BE"><span class="nav-number">8.</span> <span class="nav-text">H: 放轻松</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-ACM%E5%8D%8F%E4%BC%9A%E6%99%9A%E4%BC%9A"><span class="nav-number">9.</span> <span class="nav-text">I: ACM协会晚会</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#J-%E4%BC%9A%E9%95%BF%E7%88%B1%E6%97%85%E6%B8%B8"><span class="nav-number">10.</span> <span class="nav-text">J: 会长爱旅游</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

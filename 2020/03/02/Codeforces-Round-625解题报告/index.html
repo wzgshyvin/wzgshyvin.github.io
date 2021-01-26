@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round #625解题报告 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMCodeforces" />
+  
+  
+  
+  
+  <meta name="description" content="记录丢人点滴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #625解题报告">
+<meta property="og:url" content="http://example.com/2020/03/02/Codeforces-Round-625%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="记录丢人点滴">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/j5/wallhaven-j5op2p.png">
+<meta property="article:published_time" content="2020-03-02T01:42:16.000Z">
+<meta property="article:modified_time" content="2021-01-26T16:41:08.395Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Codeforces">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/j5/wallhaven-j5op2p.png">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Codeforces-Round-625解题报告" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/j5/wallhaven-j5op2p.png" rel="gallery_ckke6wvfd000jd8umf5ce1gtq noopener">
+        <img src="https://w.wallhaven.cc/full/j5/wallhaven-j5op2p.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Codeforces Round #625解题报告
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/03/02/Codeforces-Round-625%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" class="article-date">
+	  <time datetime="2020-03-02T01:42:16.000Z" itemprop="datePublished">March 2, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>记录丢人点滴</p>
+<a id="more"></a>
+<p>虽然真的很丢人 但是看了一下大家代码发现我至少代码还是短(?</p>
+<h3 id="A-Contest-for-Robots"><a href="#A-Contest-for-Robots" class="headerlink" title="A: Contest for Robots"></a>A: Contest for Robots</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1321/problem/A">题目链接</a><br>题意：两种机器人对于n个问题有会和不会(1和0) 希望第一种的得分比第二种高 要如何安排问题分数分布 要求分数中最大的尽量小<br>算一下第一种比第二种多的1和0 除一下<br>可能会除零 要先判掉再除</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>],b[<span class="number">105</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,c1(<span class="number">0</span>),c2(<span class="number">0</span>); sc(n);</span><br><span class="line">    rep(i,<span class="number">0</span>,n) sc(a[i]);</span><br><span class="line">    rep(i,<span class="number">0</span>,n)&#123;</span><br><span class="line">        sc(b[i]);</span><br><span class="line">        <span class="keyword">if</span>(a[i]==b[i]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a[i]&gt;b[i]) c1++;</span><br><span class="line">        <span class="keyword">else</span> c2++;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(!c1) <span class="keyword">return</span> pf(<span class="string">&quot;-1\n&quot;</span>),<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ans=(c2+c1)/c1;</span><br><span class="line">    pf(<span class="string">&quot;%d\n&quot;</span>,ans&gt;<span class="number">0</span>?ans:<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="B-Journey-Planning"><a href="#B-Journey-Planning" class="headerlink" title="B: Journey Planning"></a>B: Journey Planning</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1321/problem/B">题目链接</a><br>题意：希望选择b的总和尽量大且满足选中的bi,bj有i-j==bi-bj<br>每个b去减去i 找相同的<br>数组存的话加上n也行 但是map就是香啊<br>要ll 赛时比较草率qwq</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int ll</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;ans;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,mx(<span class="number">0</span>); sc(n); rep(i,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">        sc(a[i]); <span class="keyword">int</span> t=a[i]-i; ans[t]+=a[i];</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span>&amp; x:ans) mx=max(mx,x.second);</span><br><span class="line">    pf(<span class="string">&quot;%lld\n&quot;</span>,mx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-Remove-Adjacent"><a href="#C-Remove-Adjacent" class="headerlink" title="C: Remove Adjacent"></a>C: Remove Adjacent</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1321/problem/C">题目链接</a><br>题意：给一个字符串 对于每个字符 如果相邻字符有ascii码刚好比自己少1的 则可以删除 问最多能删多少个<br>枚举z到a 每次for一遍删 O(26*n^3)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(ll i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n,cnt(<span class="number">0</span>); <span class="built_in">string</span> s; <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s; s+=<span class="string">&#x27; &#x27;</span>; </span><br><span class="line">    dep(k,<span class="number">25</span>,<span class="number">1</span>) rep(i,<span class="number">0</span>,n) <span class="keyword">if</span>(s[i]==k+<span class="string">&#x27;a&#x27;</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i+<span class="number">1</span>]==s[i]<span class="number">-1</span>||(i&amp;&amp;s[i<span class="number">-1</span>]==s[i]<span class="number">-1</span>)) s.erase(i,<span class="number">1</span>),n--,cnt++,i=i?i<span class="number">-2</span>:<span class="number">-1</span>;</span><br><span class="line">    &#125; <span class="built_in">cout</span>&lt;&lt;cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="D-Navigation-System"><a href="#D-Navigation-System" class="headerlink" title="D: Navigation System"></a>D: Navigation System</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1321/problem/D">题目链接</a><br>题意：高德地图持续为您规划路线<br>n个点m条边的有向无权图 给k个点是必须经过的 导航每次路线会选择最短路 如果不是最短路就rebuild重新找最短路 问rebuild的最少和最多次数<br>无权图 bfs/dij/spfa啥的都行qwq<br>判是不是最短路用dis就行<br>mx和mn就差在有多条最短路的时候 这时候记一下就好了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(ll i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id,dt;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node a) <span class="keyword">const</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dt&gt;a.dt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">priority_queue</span>&lt;node&gt;q;</span><br><span class="line"><span class="keyword">int</span> n,m,k,s,t,tot;</span><br><span class="line"><span class="keyword">int</span> dis[maxn],vis[maxn],head[maxn],cnt[maxn];</span><br><span class="line"><span class="keyword">int</span> nex[maxn&lt;&lt;<span class="number">1</span>],to[maxn&lt;&lt;<span class="number">1</span>],val[maxn&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">    nex[++tot]=head[u];</span><br><span class="line">    head[u]=tot; to[tot]=v; val[tot]=w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dij</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">    rep(i,<span class="number">1</span>,n+<span class="number">1</span>) dis[i]=<span class="number">1e9</span>; dis[s]=<span class="number">0</span>;</span><br><span class="line">    q.push(&#123;s,<span class="number">0</span>&#125;); <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> fr=q.top().id; q.pop();</span><br><span class="line">        <span class="keyword">if</span>(vis[fr]) <span class="keyword">continue</span>; vis[fr]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=head[fr];j;j=nex[j])</span><br><span class="line">            <span class="keyword">if</span>(dis[to[j]]&gt;val[j]+dis[fr]&amp;&amp;!vis[to[j]])&#123;</span><br><span class="line">                dis[to[j]]=val[j]+dis[fr];</span><br><span class="line">                q.push(&#123;to[j],dis[to[j]]&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(dis[to[j]]==val[j]+dis[fr])</span><br><span class="line">                cnt[to[j]]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">// 板子闭着眼一套</span></span><br><span class="line"><span class="keyword">int</span> p[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    int mn(0),mx(0); sc(n); sc(m); while(m--)&#123;</span><br><span class="line">        <span class="keyword">int</span> u,v; sc(u); sc(v); addedge(v,u,<span class="number">1</span>);</span><br><span class="line">    &#125; sc(k); rep(i,<span class="number">1</span>,k+<span class="number">1</span>) sc(p[i]);</span><br><span class="line">    dij(p[k]); rep(i,<span class="number">1</span>,k+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i!=k&amp;&amp;dis[p[i]]!=dis[p[i+<span class="number">1</span>]]+<span class="number">1</span>) mn++;</span><br><span class="line">        <span class="keyword">else</span> mx+=cnt[p[i]];</span><br><span class="line">    &#125; pf(<span class="string">&quot;%d %d\n&quot;</span>,mn,mn+mx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="E-World-of-Darkraft-Battle-for-Azathoth"><a href="#E-World-of-Darkraft-Battle-for-Azathoth" class="headerlink" title="E: World of Darkraft: Battle for Azathoth"></a>E: World of Darkraft: Battle for Azathoth</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/contest/1321/problem/E">题目链接</a><br>补了加qwq</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/" rel="tag">Codeforces</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/03/11/Codeforces-7D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Codeforces 7D. Palindrome Degree
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/01/%E7%A8%B3%E8%B5%9A%E8%BF%B7%E6%83%91%E4%BB%A3%E7%A0%81%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">稳赚迷惑代码集</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Contest-for-Robots"><span class="nav-number">1.</span> <span class="nav-text">A: Contest for Robots</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Journey-Planning"><span class="nav-number">2.</span> <span class="nav-text">B: Journey Planning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Remove-Adjacent"><span class="nav-number">3.</span> <span class="nav-text">C: Remove Adjacent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Navigation-System"><span class="nav-number">4.</span> <span class="nav-text">D: Navigation System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-World-of-Darkraft-Battle-for-Azathoth"><span class="nav-number">5.</span> <span class="nav-text">E: World of Darkraft: Battle for Azathoth</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
