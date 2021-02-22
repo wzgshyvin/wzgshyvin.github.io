@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2020牛客暑期多校训练营（第一场） | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMNowcoder" />
+  
+  
+  
+  
+  <meta name="description" content="7.12 开始就自闭的牛客1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020牛客暑期多校训练营（第一场）">
+<meta property="og:url" content="http://wzgshyvin.github.io/2020/07/12/%E7%89%9B%E5%AE%A2%20(1)/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="7.12 开始就自闭的牛客1">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/13/wallhaven-13e52v.jpg">
+<meta property="article:published_time" content="2020-07-12T14:22:22.000Z">
+<meta property="article:modified_time" content="2021-02-22T19:02:56.071Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Nowcoder">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/13/wallhaven-13e52v.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-牛客 (1)" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/13/wallhaven-13e52v.jpg" rel="gallery_cklgyqcl8003dgcum0r79978s noopener">
+        <img src="https://w.wallhaven.cc/full/13/wallhaven-13e52v.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      2020牛客暑期多校训练营（第一场）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/07/12/%E7%89%9B%E5%AE%A2%20(1)/" class="article-date">
+	  <time datetime="2020-07-12T14:22:22.000Z" itemprop="datePublished">July 12, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>7.12 开始就自闭的牛客1</p>
+<a id="more"></a>
+<h2 id="A-B-Suffix-Array"><a href="#A-B-Suffix-Array" class="headerlink" title="A-B-Suffix Array"></a>A-B-Suffix Array</h2><p><strong>题意</strong></p>
+<p>定义数组 $B(s_1s_2…s_k)$ 。对于 $B_i$ 当存在 $j$ 满足 $j&lt;i$ 且 $s_j=s_i$ 时有 $i-max(j)$ ，否则为0。给定串 $S$ ，求 $S$ 每个后缀的 $B$ 函数的字典序</p>
+<p><strong>思路</strong></p>
+<p>有排序考虑sa。构造一个 $C$ 函数，具体定义和 $B$ 差不多不过从末尾开始。通过 $C$ 函数的后缀排序得到答案。</p>
+<p><strong>坑点</strong></p>
+<p>多组数据，记得清空</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;ll,ll&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">int</span> s[maxn],len,qwq;</span><br><span class="line"><span class="keyword">int</span> sa[maxn],rk[maxn];</span><br><span class="line"><span class="keyword">int</span> height[maxn];</span><br><span class="line"><span class="keyword">int</span> t1[maxn],t2[maxn],c[maxn];</span><br><span class="line"><span class="keyword">int</span> best[<span class="number">20</span>][maxn];</span><br><span class="line"><span class="keyword">char</span> ss[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getsa</span><span class="params">(<span class="keyword">int</span> *s,<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *x=t1,*y=t2;</span><br><span class="line">    rep(i,<span class="number">0</span>,m) c[i]=<span class="number">0</span>;</span><br><span class="line">    rep(i,<span class="number">0</span>,n) c[x[i]=s[i]]++;</span><br><span class="line">    rep(i,<span class="number">1</span>,m) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">    dep(i,n<span class="number">-1</span>,<span class="number">0</span>) sa[--c[x[i]]]=i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> p=<span class="number">0</span>;</span><br><span class="line">        rep(i,n-k,n) y[p++]=i;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) <span class="keyword">if</span>(sa[i]&gt;=k) y[p++]=sa[i]-k;</span><br><span class="line">        rep(i,<span class="number">0</span>,m) c[i]=<span class="number">0</span>;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) c[x[y[i]]]++;</span><br><span class="line">        rep(i,<span class="number">1</span>,m) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">        dep(i,n<span class="number">-1</span>,<span class="number">0</span>) sa[--c[x[y[i]]]]=y[i];</span><br><span class="line">        swap(x,y);</span><br><span class="line">        p=<span class="number">1</span>; x[sa[<span class="number">0</span>]]=<span class="number">0</span>;</span><br><span class="line">        rep(i,<span class="number">1</span>,n) x[sa[i]]=y[sa[i<span class="number">-1</span>]]==y[sa[i]]&amp;&amp;y[sa[i<span class="number">-1</span>]+k]==y[sa[i]+k]?p<span class="number">-1</span>:p++;</span><br><span class="line">        <span class="keyword">if</span>(p&gt;=n) <span class="keyword">break</span>; m=p;</span><br><span class="line">    &#125; rep(i,<span class="number">1</span>,n) rk[sa[i]]=i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span> <span class="keyword">int</span> f,s,id; &#125;p[maxn]; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.f==b.f?a.s&lt;b.s:a.f&lt;b.f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    scs(ss+<span class="number">1</span>); <span class="keyword">int</span> a=<span class="number">-1</span>,b=<span class="number">-1</span>;</span><br><span class="line">    mst(rk,<span class="number">0</span>); mst(s,<span class="number">0</span>); mst(sa,<span class="number">0</span>);</span><br><span class="line">    rep(i,<span class="number">1</span>,len+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ss[i]==<span class="string">&#x27;a&#x27;</span>) s[i]=a&gt;=<span class="number">0</span>?i-a+<span class="number">1</span>:<span class="number">1</span>,a=i;</span><br><span class="line">        <span class="keyword">else</span> s[i]=b&gt;=<span class="number">0</span>?i-b+<span class="number">1</span>:<span class="number">1</span>,b=i;</span><br><span class="line">    &#125; getsa(s+<span class="number">1</span>,len+<span class="number">1</span>,len+<span class="number">1</span>);</span><br><span class="line">    a=<span class="number">-1</span>,b=<span class="number">-1</span>; dep(i,len,<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ss[i]==<span class="string">&#x27;a&#x27;</span>) p[i]=b&gt;=<span class="number">0</span>?(node)&#123;b-i,rk[b],i&#125;:(node)&#123;len-i+<span class="number">1</span>,<span class="number">-1</span>,i&#125;,a=i;</span><br><span class="line">        <span class="keyword">else</span> p[i]=a&gt;=<span class="number">0</span>?(node)&#123;a-i,rk[a],i&#125;:(node)&#123;len-i+<span class="number">1</span>,<span class="number">-1</span>,i&#125;,b=i;</span><br><span class="line">    &#125; sort(p+<span class="number">1</span>,p+len+<span class="number">1</span>,cmp);</span><br><span class="line">    rep(i,<span class="number">1</span>,len+<span class="number">1</span>) pf(<span class="string">&quot;%d &quot;</span>,p[i].id);</span><br><span class="line">    <span class="keyword">return</span> pf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(~sc(len)) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="J-Easy-Integration"><a href="#J-Easy-Integration" class="headerlink" title="J-Easy Integration"></a>J-Easy Integration</h2><p><strong>题意</strong></p>
+<p>积分</p>
+<p><strong>思路</strong></p>
+<p>找规律 式子 $C_{2*n+1}^n *(n+1)$ ;</p>
+<p><strong>考点</strong></p>
+<p>公式推导 模逆元 组合数</p>
+<p><strong>坑点</strong></p>
+<p>预处理数组要开两倍（对不起对不起对不起）</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=e; i&gt;=s; --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b,ll mod)</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>; <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ans=ans*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>; a=a*a%mod;</span><br><span class="line">    &#125; <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line">ll n,jc[maxn],inv[maxn];</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">1ll</span>*jc[x]*inv[s]%mod*inv[x-s]%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    jc[<span class="number">0</span>]=inv[<span class="number">0</span>]=<span class="number">1</span>; rep(i,<span class="number">1</span>,maxn) jc[i]=<span class="number">1ll</span>*jc[i<span class="number">-1</span>]*i%mod;</span><br><span class="line">    inv[maxn<span class="number">-1</span>]=qpow(jc[maxn<span class="number">-1</span>],mod<span class="number">-2</span>,mod);</span><br><span class="line">    dep(i,maxn<span class="number">-2</span>,<span class="number">1</span>) inv[i]=<span class="number">1ll</span>*inv[i+<span class="number">1</span>]*(i+<span class="number">1</span>)%mod;</span><br><span class="line">    <span class="keyword">while</span>(~sc(n)) pf(<span class="string">&quot;%lld\n&quot;</span>,qpow(<span class="number">1ll</span>*(n+<span class="number">1</span>)*C(n,<span class="number">2</span>*n+<span class="number">1</span>)%mod,mod<span class="number">-2</span>,mod));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nowcoder/" rel="tag">Nowcoder</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/13/%E7%89%9B%E5%AE%A2%20(2)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2020牛客暑期多校训练营（第二场）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/12/%E4%B8%8D%E4%B8%80%E6%A0%B7%E7%9A%84%E8%AE%AD%E7%BB%83%E6%97%A5%E5%B8%B8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">不一样的训练日常</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-B-Suffix-Array"><span class="nav-number">1.</span> <span class="nav-text">A-B-Suffix Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#J-Easy-Integration"><span class="nav-number">2.</span> <span class="nav-text">J-Easy Integration</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

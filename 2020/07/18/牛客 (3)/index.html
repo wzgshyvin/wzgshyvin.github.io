@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2020牛客暑期多校训练营（第三场） | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMNowcoder" />
+  
+  
+  
+  
+  <meta name="description" content="7.18 打一半电脑死机的牛客3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020牛客暑期多校训练营（第三场）">
+<meta property="og:url" content="http://wzgshyvin.github.io/2020/07/18/%E7%89%9B%E5%AE%A2%20(3)/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="7.18 打一半电脑死机的牛客3">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/x1/wallhaven-x17yxv.jpg">
+<meta property="article:published_time" content="2020-07-18T14:22:22.000Z">
+<meta property="article:modified_time" content="2021-02-22T19:05:13.824Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Nowcoder">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/x1/wallhaven-x17yxv.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-牛客 (3)" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/x1/wallhaven-x17yxv.jpg" rel="gallery_cklgyqclf003qgcum50jl1o8k noopener">
+        <img src="https://w.wallhaven.cc/full/x1/wallhaven-x17yxv.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      2020牛客暑期多校训练营（第三场）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/07/18/%E7%89%9B%E5%AE%A2%20(3)/" class="article-date">
+	  <time datetime="2020-07-18T14:22:22.000Z" itemprop="datePublished">July 18, 2020</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>7.18 打一半电脑死机的牛客3</p>
+<a id="more"></a>
+<h2 id="A-Clam-and-Fish"><a href="#A-Clam-and-Fish" class="headerlink" title="A-Clam and Fish"></a>A-Clam and Fish</h2><p><strong>题意</strong></p>
+<p>共n天，每天共有四种状态</p>
+<ol>
+<li>无鱼无蛤蜊</li>
+<li>无鱼有蛤蜊</li>
+<li>有鱼无蛤蜊</li>
+<li>有鱼有蛤蜊</li>
+</ol>
+<p>每天可进行的操作：</p>
+<ol>
+<li>做鱼饵（当天有蛤蜊）</li>
+<li>钓鱼（当天有鱼时不消耗鱼饵，无鱼时可用一个鱼饵换一条鱼）</li>
+<li>啥也不做</li>
+</ol>
+<p>求出最多可以抓多少鱼</p>
+<p><strong>思路</strong></p>
+<p>有鱼的时候抓鱼一定最优，没有鱼的时候先考虑有鱼饵的情况，如果当前鱼饵数小于之后没有鱼的天数，则收集鱼饵，否则就用鱼饵换鱼。这样既没鱼也没鱼饵的时候就可以直接用鱼饵换鱼。</p>
+<h2 id="B-Classical-String-Problem"><a href="#B-Classical-String-Problem" class="headerlink" title="B-Classical String Problem"></a>B-Classical String Problem</h2><p><strong>题意</strong></p>
+<p>给定一个字符串 $s$，规定两种操作：</p>
+<ul>
+<li>$A$ 操作：输出 $s$ 的第 $x$ 个字符；</li>
+<li>$M$ 操作：将 $s$ 的最右边 $x$ 个字符串移到最左边或者将 $s$ 的最左边 $x$ 个字符串移到最右边</li>
+</ul>
+<p><strong>思路</strong></p>
+<p>设一个变量 $cur$ ，初始值为 $0$ ，题目本质就是 M 操作时改变 $cur$ 的值，左移右就是让 $cur$ 加上 $x$ 后对字符串长度 $len$ 取模，右移左就是让 $cur$ 减去 $x$ 后对字符串长度 $len$ 取模，$A$ 操作时以 $cur$ 为起点取第 $x$ 个字符，为了保证 $cur$ 的值不越过 $[0,len-1]$ 这个范围，先将 $x$ 对 $len$ 取模，再在计算 $cur$ 时多加一个 $len$</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    scs(s); <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s),cur(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> q; sc(q); getchar(); <span class="keyword">while</span>(q--)&#123;</span><br><span class="line">        <span class="keyword">char</span> c; <span class="keyword">int</span> t; c=getchar(); sc(t); getchar();</span><br><span class="line">        <span class="keyword">if</span>(c==<span class="string">&#x27;A&#x27;</span>) pf(<span class="string">&quot;%c\n&quot;</span>,s[(t+cur+len<span class="number">-1</span>)%len]);</span><br><span class="line">        <span class="keyword">else</span>&#123; cur+=t; <span class="keyword">if</span>(t&lt;<span class="number">0</span>) cur+=len; cur%=len; &#125;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">/* int _; sc(_); while(_--) */</span> solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="D-Points-Construction-Problem"><a href="#D-Points-Construction-Problem" class="headerlink" title="D-Points Construction Problem"></a>D-Points Construction Problem</h2><p><strong>题意</strong></p>
+<p>无限大的平面上全部为白点，选择刚好 $n$ 个涂黑，需要有恰好 $m$ 对相邻点颜色不同。求出其中一种方案。</p>
+<p><strong>思路</strong></p>
+<p>呜呜气死了场上没开这题血亏。就是个简单构造题。</p>
+<p>已知有 $n$ 个黑点的情况下，最多有 $4*n$ 对相邻点颜色不同，即分散开来的每个点的四周；而最少的情况是补成方块（或者最接近方块）的形状。同时能发现不可能有奇数点对。非法情况就只有 $m$ 为奇数、$m$ 过小、$m$ 过大，而区间内的任意偶数都能通过固定形状变化而得。</p>
+<p>最大情况判掉，反正好写。</p>
+<p>只有一列的情况也选择特判，好写一点。因为 $n\leq 50$ ，所以先排出一列间隔 $100$ 的点。之后根据 $m$ 的值合并点。最少的情况为 $n$ 个点排成连续的直线，此时有 $2*n+2$ 个点对。</p>
+<p>因为 $n\leq 50$ ，所以最多只有 $7$ 种排列情况。逐一判断。</p>
+<p>对于每个排列情况：设每列最多有 $x$ 个。最少情况是所有点排成矩形（或者最接近矩形）；最多情况是先排一个 $x*x$ 的方块，剩下的点排成一列，大概是个小旗的形状。</p>
+<p>$m$ 在当前排列合法时就可以从最多的情况一个一个点合并。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=(s); i&lt;(e); ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dep(i,e,s) for(int i=(e); i&gt;=(s); --i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e4</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">pii ans[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">slove</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t1=<span class="number">2</span>*(x+n/x)+<span class="number">2</span>*(n%x&gt;<span class="number">0</span>),t2=<span class="number">4</span>*x+<span class="number">2</span>*(n-x*x);</span><br><span class="line">    <span class="keyword">if</span>(t1&gt;m) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> r=n-x*x,d=t2-m,u=<span class="number">1</span>,cnt(<span class="number">0</span>);</span><br><span class="line">    rep(i,<span class="number">1</span>,x+<span class="number">1</span>) rep(j,<span class="number">1</span>,x+<span class="number">1</span>) ans[cnt++]=pii(i,j);</span><br><span class="line">    rep(i,<span class="number">1</span>,r+<span class="number">1</span>) ans[cnt++]=pii(x+i,<span class="number">1</span>);</span><br><span class="line">    <span class="comment">// 根据差值调整</span></span><br><span class="line">    <span class="keyword">int</span> v=cnt<span class="number">-1</span>; </span><br><span class="line">    <span class="keyword">while</span>(v&gt;=cnt-d/<span class="number">2</span>)&#123;</span><br><span class="line">        rep(j,<span class="number">2</span>,x+<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;cnt-d/<span class="number">2</span>) <span class="keyword">break</span>;</span><br><span class="line">            ans[i]=pii(x+u,j),v--;</span><br><span class="line">        &#125; u++;</span><br><span class="line">    &#125;</span><br><span class="line">    rep(i,<span class="number">0</span>,cnt) pf(<span class="string">&quot;%d %d\n&quot;</span>,ans[i].first,ans[i].second);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m; sc(n); sc(m);</span><br><span class="line">    <span class="keyword">int</span> q=<span class="number">1</span>; <span class="keyword">while</span>(q*q&lt;=n) q++; q--;</span><br><span class="line">    <span class="keyword">int</span> u=<span class="number">4</span>*q,e=n-q*q; u+=e?n&lt;=q*(q+<span class="number">1</span>)?<span class="number">2</span>:<span class="number">4</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(m&lt;u||m&amp;<span class="number">1</span>||m&gt;<span class="number">4</span>*n) <span class="keyword">return</span> pf(<span class="string">&quot;No\n&quot;</span>); </span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">4</span>*n)&#123;</span><br><span class="line">        pf(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">        rep(i,<span class="number">1</span>,n+<span class="number">1</span>)  pf(<span class="string">&quot;%d %d\n&quot;</span>,i,i);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">4</span>*n,d=t-m; </span><br><span class="line">    <span class="keyword">if</span>(m&gt;=<span class="number">2</span>*n+<span class="number">2</span>)&#123;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) ans[i]=pii(<span class="number">100</span>*i,<span class="number">100</span>*i);</span><br><span class="line">        pf(<span class="string">&quot;Yes\n&quot;</span>); <span class="keyword">int</span> qaq=<span class="number">1</span>;</span><br><span class="line">        dep(i,n<span class="number">-1</span>,n-d/<span class="number">2</span>) ans[i]=pii(qaq,<span class="number">0</span>),qaq++;</span><br><span class="line">        rep(i,<span class="number">0</span>,n) pf(<span class="string">&quot;%d %d\n&quot;</span>,ans[i].first,ans[i].second);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    pf(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">    rep(i,<span class="number">2</span>,<span class="number">8</span>) <span class="keyword">if</span>(slove(i,n,m)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 只用讨论1-7列的情况</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="F-Fraction-Construction-Problem"><a href="#F-Fraction-Construction-Problem" class="headerlink" title="F-Fraction Construction Problem"></a>F-Fraction Construction Problem</h2><p><strong>题意</strong></p>
+<p>给定 $a$ 、$b$，求满足$\frac{c}{d}-\frac{e}{f}=\frac{a}{b}$的 $c$ 、$d$ 、$e$ 、$f$ ，其中 $d$ 和 $f$ 需小于 $b$</p>
+<p><strong>思路</strong></p>
+<p>首先考虑 $a$ 和 $b$ 不互质的情况（题目没有保证互质）。可以想到直接让 $c/d$ 为整数，$e$ 和 $f$ 相减一下就得到了。</p>
+<p>通分后有 $\frac{c * f-e * d}{d * f}=\frac{a}{b}$（此时 $a$ 、$b$ 互质）。则必须有 $d*f\equiv 0$ $(mod$ $b)$ ，此题需要 $d$ 、$f$ 尽量小即直接考虑 $d * f=b$。</p>
+<p>可以初步判掉一部分无解的情况：$b$ 为 $1$ 时和 $b$ 为质数显然无解。</p>
+<p>当 $d$ 、$f$ 互质时有 $c * f-e * d=1$ 即 $a * c * f-a * e * d=a$ 。故求 $c$ 、$e$ 可以通过 $exgcd$（最后再乘上 $a$ ）。</p>
+<p>还要注意的就是当 $b$ 只有一个质因数时，不存在互质且积为 $b$ 的 $d$ 、$f$，此时无解。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scl(x) scanf(<span class="meta-string">&quot;%lld&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=s; i&lt;e; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!b)&#123; x=<span class="number">1</span>; y=<span class="number">0</span>; <span class="keyword">return</span> a; &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll ans=exgcd(b,a%b,y,x);</span><br><span class="line">        y-=(a/b)*x; <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> p[maxn],vis[maxn],pn;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    rep(i,<span class="number">2</span>,maxn)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!vis[i]) p[pn++]=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;pn&amp;&amp;i*p[j]&lt;maxn;j++) vis[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">    &#125; mst(vis,<span class="number">0</span>); rep(i,<span class="number">0</span>,pn) vis[p[i]]++; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll a,b; scl(a); scl(b);</span><br><span class="line">    ll g=__gcd(a,b),c,d,e,f;</span><br><span class="line">    <span class="keyword">if</span>(g&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        c=a/b+<span class="number">1</span>; <span class="comment">// 不能取上整 参考样例2 2</span></span><br><span class="line">        d=<span class="number">1</span>; a/=g; b/=g; e=c*b-a; f=b;</span><br><span class="line">        <span class="keyword">return</span> pf(<span class="string">&quot;%lld %lld %lld %lld\n&quot;</span>,c,d,e,f);</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">1</span>||vis[b]) <span class="keyword">return</span> pf(<span class="string">&quot;-1 -1 -1 -1\n&quot;</span>);</span><br><span class="line">    <span class="comment">// 先约分再判质数是a%b==0的情况是有解的</span></span><br><span class="line">    <span class="comment">// 为1时没有比1小的正数 为质数时无法分解</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vv; ll tb=b;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;<span class="number">1ll</span>*p[i]*p[i]&lt;=tb;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(tb%p[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            ll res=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(tb%p[i]==<span class="number">0</span>) tb/=p[i],res*=p[i];</span><br><span class="line">            <span class="comment">// 这么计算res可以在后一步枚举的时候保证b/res和res是互质的</span></span><br><span class="line">            vv.push_back(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">if</span>(tb&gt;<span class="number">1</span>) vv.push_back(tb); <span class="comment">// 剩下的大质数也记得要存</span></span><br><span class="line">    <span class="keyword">if</span>(vv.size()==<span class="number">1</span>) <span class="keyword">return</span> pf(<span class="string">&quot;-1 -1 -1 -1\n&quot;</span>);</span><br><span class="line">    <span class="comment">// 只有一个质因数的情况也无解 可以感性理解一下=。=</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> x:vv)&#123;</span><br><span class="line">        ll d=x,f=b/x,q=exgcd(f,-d,c,e);</span><br><span class="line">        <span class="comment">// d和f相乘为b且互质</span></span><br><span class="line">        ll tt=(ll)(max((<span class="number">1.</span>*c<span class="number">-1</span>)/d,(<span class="number">1.</span>*e<span class="number">-1</span>)/f))+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(c&lt;=<span class="number">0</span>||e&lt;=<span class="number">0</span>) c+=tt*d,e+=tt*f;</span><br><span class="line">        <span class="comment">// 小于0时加到大于0</span></span><br><span class="line">        <span class="keyword">if</span>(c*f&lt;e*d) swap(c,e),swap(d,f);</span><br><span class="line">        <span class="comment">// 保证结果是正数</span></span><br><span class="line">        c*=a; e*=a; <span class="comment">// 别忘了</span></span><br><span class="line">        <span class="keyword">return</span> pf(<span class="string">&quot;%lld %lld %lld %lld\n&quot;</span>,c,d,e,f);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    init(); <span class="keyword">int</span> _; sc(_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nowcoder/" rel="tag">Nowcoder</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/20/%E7%89%9B%E5%AE%A2%20(4)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2020牛客暑期多校训练营（第四场）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/13/%E7%89%9B%E5%AE%A2%20(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2020牛客暑期多校训练营（第二场）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Clam-and-Fish"><span class="nav-number">1.</span> <span class="nav-text">A-Clam and Fish</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B-Classical-String-Problem"><span class="nav-number">2.</span> <span class="nav-text">B-Classical String Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#D-Points-Construction-Problem"><span class="nav-number">3.</span> <span class="nav-text">D-Points Construction Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-Fraction-Construction-Problem"><span class="nav-number">4.</span> <span class="nav-text">F-Fraction Construction Problem</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

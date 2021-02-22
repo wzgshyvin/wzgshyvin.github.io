@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2020牛客暑期多校训练营（第八场） | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACMNowcoder" />
+  
+  
+  
+  
+  <meta name="description" content="8.03 又写模拟写哭了的牛客8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020牛客暑期多校训练营（第八场）">
+<meta property="og:url" content="http://wzgshyvin.github.io/2020/08/03/%E7%89%9B%E5%AE%A2%20(8)/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="8.03 又写模拟写哭了的牛客8">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://w.wallhaven.cc/full/dg/wallhaven-dg725l.jpg">
+<meta property="article:published_time" content="2020-08-03T14:22:22.000Z">
+<meta property="article:modified_time" content="2021-02-22T19:14:09.207Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Nowcoder">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/dg/wallhaven-dg725l.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-牛客 (8)" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://w.wallhaven.cc/full/dg/wallhaven-dg725l.jpg" rel="gallery_cklgyqclq0042gcum0hw28s1l noopener">
+        <img src="https://w.wallhaven.cc/full/dg/wallhaven-dg725l.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      2020牛客暑期多校训练营（第八场）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/08/03/%E7%89%9B%E5%AE%A2%20(8)/" class="article-date">
+	  <time datetime="2020-08-03T14:22:22.000Z" itemprop="datePublished">August 3, 2020</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>8.03 又写模拟写哭了的牛客8</p>
+<a id="more"></a>
+<h2 id="G-Game-SET"><a href="#G-Game-SET" class="headerlink" title="G-Game SET"></a>G-Game SET</h2><p><strong>题意</strong></p>
+<p>给定一些卡片。一张卡片有 $4$ 个属性，每个属性有 $4$ 种样式，用 $1$ 、$2$ 、$3$ 、$ * $ 表示。$ * $ 可以替换为 $1$ 、$2$ 、$3$ 的任意一个。定义一个卡片集为 $3$ 张每个属性样式全一样或者全不一样的卡片，找出给定卡片的任意卡片集。</p>
+<p><strong>思路</strong></p>
+<p>暴力可以过，那就非常简单呗</p>
+<p>再也不想写模拟了，真的恶心</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pf printf</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc(x) scanf(<span class="meta-string">&quot;%d&quot;</span>, &amp;x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> scs(x) scanf(<span class="meta-string">&quot;%s&quot;</span>, x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mst(a,x) memset(a, x, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,s,e) for(int i=(s); i&lt;(e); ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">5</span>][<span class="number">300</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> cas)</span></span>&#123;</span><br><span class="line">    pf(<span class="string">&quot;Case #%d: &quot;</span>,cas); mst(vis,<span class="number">0</span>); </span><br><span class="line">    <span class="keyword">int</span> n,ff(<span class="number">0</span>); sc(n); rep(i,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">        scs(s+<span class="number">1</span>); <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">cnt</span><span class="params">(<span class="number">0</span>)</span></span>; <span class="built_in">string</span> t=<span class="string">&quot;&quot;</span>;</span><br><span class="line">        rep(j,<span class="number">1</span>,len+<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[j]==<span class="string">&#x27;[&#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(s[j]==<span class="string">&#x27;]&#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(cnt==<span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(t==<span class="string">&quot;*&quot;</span>) vis[cnt][i]=<span class="number">-1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;one&quot;</span>) vis[cnt][i]=<span class="number">1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;two&quot;</span>) vis[cnt][i]=<span class="number">2</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;three&quot;</span>) vis[cnt][i]=<span class="number">3</span>; </span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(cnt==<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(t==<span class="string">&quot;*&quot;</span>) vis[cnt][i]=<span class="number">-1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;diamond&quot;</span>) vis[cnt][i]=<span class="number">1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;squiggle&quot;</span>) vis[cnt][i]=<span class="number">2</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;oval&quot;</span>) vis[cnt][i]=<span class="number">3</span>; </span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(cnt==<span class="number">2</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(t==<span class="string">&quot;*&quot;</span>) vis[cnt][i]=<span class="number">-1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;solid&quot;</span>) vis[cnt][i]=<span class="number">1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;striped&quot;</span>) vis[cnt][i]=<span class="number">2</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;open&quot;</span>) vis[cnt][i]=<span class="number">3</span>; </span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(cnt==<span class="number">3</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(t==<span class="string">&quot;*&quot;</span>) vis[cnt][i]=<span class="number">-1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;red&quot;</span>) vis[cnt][i]=<span class="number">1</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;green&quot;</span>) vis[cnt][i]=<span class="number">2</span>; </span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="string">&quot;purple&quot;</span>) vis[cnt][i]=<span class="number">3</span>; </span><br><span class="line">                &#125;</span><br><span class="line">                t=<span class="string">&quot;&quot;</span>; cnt++; </span><br><span class="line">                <span class="keyword">continue</span>; </span><br><span class="line">            &#125;</span><br><span class="line">            t+=s[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    rep(i,<span class="number">1</span>,n+<span class="number">1</span>) rep(j,i+<span class="number">1</span>,n+<span class="number">1</span>) rep(k,j+<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> fl[<span class="number">4</span>]; mst(fl,<span class="number">0</span>); rep(u,<span class="number">0</span>,<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(vis[u][i]==<span class="number">-1</span>||vis[u][j]==<span class="number">-1</span>||vis[u][k]==<span class="number">-1</span>)&#123; fl[u]=<span class="number">1</span>; <span class="keyword">continue</span>; &#125; </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(vis[u][i]==vis[u][j]&amp;&amp;vis[u][j]==vis[u][k])&#123; fl[u]=<span class="number">1</span>; <span class="keyword">continue</span>; &#125; </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(vis[u][i]!=vis[u][j]&amp;&amp;vis[u][j]!=vis[u][k]&amp;&amp;vis[u][i]!=vis[u][k])&#123; fl[u]=<span class="number">1</span>; <span class="keyword">continue</span>; &#125; </span><br><span class="line">        &#125; <span class="keyword">if</span>(fl[<span class="number">0</span>]+fl[<span class="number">1</span>]+fl[<span class="number">2</span>]+fl[<span class="number">3</span>]==<span class="number">4</span>) <span class="keyword">return</span> pf(<span class="string">&quot;%d %d %d\n&quot;</span>,i,j,k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pf(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _,cas(<span class="number">0</span>); sc(_); <span class="keyword">while</span>(_--) solve(++cas);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nowcoder/" rel="tag">Nowcoder</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/04/%E6%9D%AD%E7%94%B5%20(5)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2020 Multi-University Training Contest 5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/01/%E7%89%9B%E5%AE%A2%20(7)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2020牛客暑期多校训练营（第七场）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#G-Game-SET"><span class="nav-number">1.</span> <span class="nav-text">G-Game SET</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
