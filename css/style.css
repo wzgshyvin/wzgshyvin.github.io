@@ -214,7 +214,7 @@ body {
   transform: scale(1.4, 3.2);
 }
 .outer {
-  max-width: 1040px;
+  max-width: 1028px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -229,8 +229,8 @@ body {
 .inner {
   display: inline;
   float: left;
-  width: 98.0392156862745%;
-  margin: 0 0.980392156862745%;
+  width: 98.01587301587301%;
+  margin: 0 0.992063492063492%;
 }
 .left,
 .alignleft {
@@ -267,8 +267,8 @@ body {
   #main {
     display: inline;
     float: left;
-    width: 64.70588235294117%;
-    margin: 0 0.980392156862745%;
+    width: 64.68253968253968%;
+    margin: 0 0.992063492063492%;
   }
 }
 .archive-year,
@@ -405,11 +405,11 @@ body {
   }
 }
 .article-inner {
-  overflow: hidden;
+  overflow: auto;
   border: 0px solid #eef1f8;
 }
 .article-inner-night {
-  overflow: hidden;
+  overflow: auto;
   border: 0px solid #eef1f8;
 }
 .article-meta {
@@ -642,7 +642,7 @@ a.article-title:hover {
   position: relative;
   padding-top: 56.25%;
   height: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 .article-entry .video-container iframe,
 .article-entry .video-container object,
@@ -748,6 +748,7 @@ a.article-title:hover {
     margin: 50px 0;
   }
   #article-nav:before {
+    overflow: auto;
     width: 8px;
     height: 8px;
     position: absolute;
@@ -818,7 +819,7 @@ a.article-title:hover {
   box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
   border-radius: 3px;
   margin-left: -145px;
-  overflow: hidden;
+  overflow: auto;
   z-index: 1;
 }
 .article-share-box.on {
@@ -867,6 +868,7 @@ a.article-title:hover {
 .article-share-google:before {
   font-size: 20px;
   font-family: FontAwesome;
+  overflow: auto;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -913,7 +915,7 @@ a.article-title:hover {
 }
 .article-gallery-photos {
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 .article-gallery-img {
   display: none;
@@ -949,7 +951,7 @@ a.article-title:hover {
   line-height: 1em;
   font-size: 0.9em;
   float: left;
-  overflow: hidden;
+  overflow: auto;
 }
 @media screen and (max-width: 479px) {
   #toc {
@@ -960,14 +962,6 @@ a.article-title:hover {
   #toc {
     display: none;
   }
-}
-.toc-fixed {
-  position: fixed;
-  width: inherit !important;
-  top: 30px;
-  margin-top: 0;
-  overflow: hidden;
-  z-index: 1;
 }
 .nav {
   padding: 0;
@@ -1109,7 +1103,7 @@ a.article-title:hover {
 .archive-article {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
-  overflow: hidden;
+  overflow: auto;
   break-inside: avoid-column;
 }
 .archive-article-inner {
@@ -1219,7 +1213,7 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #000;
+  background: #2b2b2b;
   margin: 20px 0px;
   padding: 15px 20px;
   border-style: solid;
@@ -1233,7 +1227,7 @@ a.article-title:hover {
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
   color: #666;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 figure.highlight::-webkit-scrollbar {
   width: 10px;
@@ -1321,7 +1315,7 @@ figure.highlight::-webkit-scrollbar-track {
   border-style: solid;
   border-color: #eef1f8;
   border-width: 1px 0;
-  background: #000;
+  background: #2b2b2b;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1347,7 +1341,7 @@ figure.highlight::-webkit-scrollbar-track {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #000;
+  background: #2b2b2b;
   color: #969896;
   font: 0.85em -apple-system, "Arial", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0 0;
@@ -1386,12 +1380,12 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #e78c45;
+  color: #fccb50;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: #b9ca4a;
+  color: #63d88a;
 }
 pre .string,
 pre .value,
@@ -1399,7 +1393,7 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #b9ca4a;
+  color: #63d88a;
 }
 pre .css .hexcolor {
   color: #70c0b1;
@@ -1412,11 +1406,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #7aa6da;
+  color: #78bbe8;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #c397d8;
+  color: #f77eb2;
 }
 @media screen and (max-width: 479px) {
   #mobile-nav {
@@ -1525,7 +1519,7 @@ pre .javascript .function {
   right: 0;
   top: 45px;
   bottom: 0;
-  overflow-y: auto;
+  overflow: auto;
   position: absolute;
 }
 .ins-section-container {
@@ -1587,8 +1581,8 @@ pre .javascript .function {
   #sidebar {
     display: inline;
     float: left;
-    width: 31.372549019607842%;
-    margin: 0 0.980392156862745%;
+    width: 31.349206349206348%;
+    margin: 0 0.992063492063492%;
   }
 }
 @media screen and (max-width: 479px) {
@@ -1604,6 +1598,7 @@ pre .javascript .function {
   color: #222;
 }
 .widget {
+  overflow: auto;
   color: #777;
   background: transparent;
   padding: 15px 0 0;
@@ -1682,6 +1677,7 @@ pre .javascript .function {
 .category-list-count,
 .tag-list-count,
 .archive-list-count {
+  overflow: auto;
   padding-left: 5px;
   color: #999;
   font-size: 0.85em;
