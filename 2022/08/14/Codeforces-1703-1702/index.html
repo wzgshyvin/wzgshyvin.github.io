@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round 1703&amp;1702 | V1n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="ACM" />
+  
+  
+  
+  
+  <meta name="description" content="上班阶段的忙里偷闲（甚至还没做完）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round 1703&amp;1702">
+<meta property="og:url" content="http://wzgshyvin.github.io/2022/08/14/Codeforces-1703-1702/index.html">
+<meta property="og:site_name" content="V1n">
+<meta property="og:description" content="上班阶段的忙里偷闲（甚至还没做完）">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://imglf3.lf127.net/img/2956f1f3050e32ba/NGZieHYxbGtlN1orVVdQOTVDTDVVNEpPNkc4V1NaS1AvM1l3NVpnbThoVT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg">
+<meta property="article:published_time" content="2022-08-14T10:08:01.000Z">
+<meta property="article:modified_time" content="2022-08-14T15:50:53.057Z">
+<meta property="article:author" content="V1n">
+<meta property="article:tag" content="ACM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imglf3.lf127.net/img/2956f1f3050e32ba/NGZieHYxbGtlN1orVVdQOTVDTDVVNEpPNkc4V1NaS1AvM1l3NVpnbThoVT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="V1n" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="V1n" rel="home"> V1n </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">I have suffered and despaired and known death and I am glad that I am in this great world.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/Friends">friends</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Codeforces-1703-1702" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://imglf3.lf127.net/img/2956f1f3050e32ba/NGZieHYxbGtlN1orVVdQOTVDTDVVNEpPNkc4V1NaS1AvM1l3NVpnbThoVT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" rel="gallery_cl6ticyx1000984um0efi9ooy noopener">
+        <img src="https://imglf3.lf127.net/img/2956f1f3050e32ba/NGZieHYxbGtlN1orVVdQOTVDTDVVNEpPNkc4V1NaS1AvM1l3NVpnbThoVT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Codeforces Round 1703&amp;1702
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2022/08/14/Codeforces-1703-1702/" class="article-date">
+	  <time datetime="2022-08-14T10:08:01.000Z" itemprop="datePublished">August 14, 2022</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上班阶段的忙里偷闲（甚至还没做完）</p>
+<a id="more"></a>
+<p>因为只是div4和div3 我又拖了很久没有写（）所以不怎么写题意 就贴个代码</p>
+<h3 id="1703A-YES-or-YES"><a href="#1703A-YES-or-YES" class="headerlink" title="1703A: YES or YES?"></a>1703A: YES or YES?</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1703/problem/A">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s; <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s.size(); ++i) s[i]=<span class="built_in">tolower</span>(s[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">puts</span>(s==<span class="string">&quot;yes&quot;</span>?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1703B-ICPC-Balloons"><a href="#1703B-ICPC-Balloons" class="headerlink" title="1703B: ICPC Balloons"></a>1703B: ICPC Balloons</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1703/problem/B">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,ans(<span class="number">0</span>); <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s; <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;cnt(<span class="number">26</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> c: s)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!cnt[c-<span class="string">&#x27;A&#x27;</span>]) ans+=<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">else</span> ans++;</span><br><span class="line">        cnt[c-<span class="string">&#x27;A&#x27;</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1703C-Cypher"><a href="#1703C-Cypher" class="headerlink" title="1703C: Cypher"></a>1703C: Cypher</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1703/problem/C">题目链接</a></p>
+<p>模拟</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vv(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;vv[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> k; <span class="built_in">string</span> s;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;k&gt;&gt;s;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c: s)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27;U&#x27;</span>) vv[i]--;</span><br><span class="line">            <span class="keyword">else</span> vv[i]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;(vv[i]+<span class="number">10</span>)%<span class="number">10</span>&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1703D-Double-Strings"><a href="#1703D-Double-Strings" class="headerlink" title="1703D: Double Strings"></a>1703D: Double Strings</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1703/problem/D">题目链接</a></p>
+<p>只需要两个拼起来 不需要多个</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">string</span> s[maxn];</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt;mp;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_ans</span><span class="params">(<span class="built_in">string</span> s0, <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> t=<span class="string">&quot;&quot;</span>; t+=s0[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len; ++i)&#123;</span><br><span class="line">        <span class="built_in">string</span> s1=s0.substr(i);</span><br><span class="line">        <span class="keyword">if</span>(mp.count(t)&amp;&amp;(mp.count(s1))) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        t+=s0[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s[a].size()&lt;s[b].size();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span>&gt;&gt;n; mp.clear();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) <span class="built_in">cin</span>&gt;&gt;s[i];</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;ord(n),ans(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) ord[i]=i;</span><br><span class="line">    sort(ord.begin(),ord.end(),cmp); </span><br><span class="line">    <span class="keyword">int</span> len0=s[ord[<span class="number">0</span>]].size(),ff(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)&#123;</span><br><span class="line">        mp[s[ord[i]]]++; <span class="keyword">int</span> len=s[ord[i]].size();</span><br><span class="line">        <span class="keyword">if</span>(!ff&amp;&amp;len==len0) ans[ord[i]]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span> ff++,ans[ord[i]]=find_ans(s[ord[i]],len);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) <span class="built_in">cout</span>&lt;&lt;ans[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1703E-Mirror-Grid"><a href="#1703E-Mirror-Grid" class="headerlink" title="1703E: Mirror Grid"></a>1703E: Mirror Grid</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1703/problem/E">题目链接</a></p>
+<p>美团笔试出过 秋招的小朋友可以看看</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">string</span> s[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,ans(<span class="number">0</span>); <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) <span class="built_in">cin</span>&gt;&gt;s[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; ++j)&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp=(<span class="keyword">int</span>)s[i][j]+s[j][n-i<span class="number">-1</span>]+s[n-i<span class="number">-1</span>][n-j<span class="number">-1</span>]+s[n-j<span class="number">-1</span>][i]<span class="number">-4</span>*<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span>(tmp&lt;=<span class="number">2</span>) s[i][j]=s[j][n-i<span class="number">-1</span>]=s[n-i<span class="number">-1</span>][n-j<span class="number">-1</span>]=s[n-j<span class="number">-1</span>][i]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span> s[i][j]=s[j][n-i<span class="number">-1</span>]=s[n-i<span class="number">-1</span>][n-j<span class="number">-1</span>]=s[n-j<span class="number">-1</span>][i]=<span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">        ans+=min(tmp, <span class="number">4</span>-tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1703F-Yet-Another-Problem-About-Pairs-Satisfying-an-Inequality"><a href="#1703F-Yet-Another-Problem-About-Pairs-Satisfying-an-Inequality" class="headerlink" title="1703F: Yet Another Problem About Pairs Satisfying an Inequality"></a>1703F: Yet Another Problem About Pairs Satisfying an Inequality</h3><p>嘴完待补</p>
+<h3 id="1703G-Good-Key-Bad-Key"><a href="#1703G-Good-Key-Bad-Key" class="headerlink" title="1703G: Good Key, Bad Key"></a>1703G: Good Key, Bad Key</h3><p>嘴完待补</p>
+<h3 id="1702A-Round-Down-the-Price"><a href="#1702A-Round-Down-the-Price" class="headerlink" title="1702A: Round Down the Price"></a>1702A: Round Down the Price</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/A">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> d=<span class="number">1</span>; <span class="keyword">while</span>(d&lt;=n) d*=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, n-d/<span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702B-Polycarp-Writes-a-String-from-Memory"><a href="#1702B-Polycarp-Writes-a-String-from-Memory" class="headerlink" title="1702B: Polycarp Writes a String from Memory"></a>1702B: Polycarp Writes a String from Memory</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/B">题目链接</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">char</span>&gt;st;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">ans</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">char</span> c: s)&#123;</span><br><span class="line">        st.insert(c);</span><br><span class="line">        <span class="keyword">if</span>(st.size()==<span class="number">4</span>)&#123;</span><br><span class="line">            st.clear();</span><br><span class="line">            st.insert(c);</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(st.size()) ans++;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702C-Train-and-Queries"><a href="#1702C-Train-and-Queries" class="headerlink" title="1702C: Train and Queries"></a>1702C: Train and Queries</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/C">题目链接</a></p>
+<p>离散化后存一个pair记录最远和最近</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,k; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n,&amp;k);</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arr(n+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;&gt;pos;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;arr[i]);</span><br><span class="line">        <span class="keyword">if</span>(!pos.count(arr[i])) pos[arr[i]]=&#123;i,i&#125;;</span><br><span class="line">        <span class="keyword">else</span> pos[arr[i]].second=i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;k; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> a,b; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;a,&amp;b);</span><br><span class="line">        <span class="keyword">if</span>(!pos.count(a)||!pos.count(b)) <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(pos[b].second&gt;pos[a].first?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702D-Not-a-Cheap-String"><a href="#1702D-Not-a-Cheap-String" class="headerlink" title="1702D: Not a Cheap String"></a>1702D: Not a Cheap String</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/D">题目链接</a></p>
+<p>简单贪心</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s[a]&lt;s[b];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k; <span class="built_in">scanf</span>(<span class="string">&quot;%s%d&quot;</span>, s,&amp;k);</span><br><span class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s),sum(<span class="number">0</span>),cnt=len;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arr(len);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; ++i) arr[i]=i;</span><br><span class="line">    sort(arr.begin(),arr.end(),cmp);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; ++i) sum+=s[i]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=len<span class="number">-1</span>; i&gt;=<span class="number">0</span>; --i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(sum&lt;=k) <span class="keyword">break</span>;</span><br><span class="line">        sum-=s[arr[i]]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>;</span><br><span class="line">        cnt=i;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(arr.begin(),arr.begin()+cnt);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;cnt; ++i) <span class="built_in">putchar</span>(s[arr[i]]);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702E-Split-Into-Two-Sets"><a href="#1702E-Split-Into-Two-Sets" class="headerlink" title="1702E: Split Into Two Sets"></a>1702E: Split Into Two Sets</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/E">题目链接</a></p>
+<p>找环，需要环不是奇数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> n,ff,vis[maxn];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vv[maxn];</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;ss;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> st, <span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">    vis[st]++;</span><br><span class="line">    ss.insert(st);</span><br><span class="line">    <span class="keyword">if</span>(vis[st]==<span class="number">2</span>)&#123;</span><br><span class="line">        ff=!(ss.size()&amp;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!ff) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;vv[st].size(); ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> num=vv[st][i];</span><br><span class="line">        <span class="keyword">if</span>(num==fa) <span class="keyword">continue</span>;</span><br><span class="line">        dfs(num, st);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n); ff=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;cnt(n+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> a,b; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;a,&amp;b);</span><br><span class="line">        <span class="keyword">if</span>(a==b) ff=<span class="number">0</span>; </span><br><span class="line">        cnt[a]++; cnt[b]++;</span><br><span class="line">        <span class="keyword">if</span>(cnt[a]&gt;<span class="number">2</span>||cnt[b]&gt;<span class="number">2</span>) ff=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(!ff) <span class="keyword">continue</span>;</span><br><span class="line">        vv[a].push_back(b);</span><br><span class="line">        vv[b].push_back(a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">if</span>(!vis[i])&#123;</span><br><span class="line">            ss.clear();</span><br><span class="line">            ss.insert(i);</span><br><span class="line">            dfs(i,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)</span><br><span class="line">        vis[i]=<span class="number">0</span>, vv[i].clear();</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">puts</span>(ff?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702F-Equate-Multisets"><a href="#1702F-Equate-Multisets" class="headerlink" title="1702F: Equate Multisets"></a>1702F: Equate Multisets</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1702/problem/F">题目链接</a></p>
+<p>暴力过了（……）加了个小剪枝 可能是假的 反正过了（摊手）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;s1;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> a; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">        s1[a]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> b,b1; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;b); </span><br><span class="line">        <span class="keyword">if</span>(i&gt;<span class="number">1e5</span>&amp;&amp;s1.size()&gt;<span class="number">1e5</span>) <span class="keyword">continue</span>;</span><br><span class="line">        b1=b; <span class="keyword">while</span>(b1)&#123;</span><br><span class="line">            <span class="keyword">int</span> b2=b1;</span><br><span class="line">            <span class="keyword">while</span>(b2&lt;=(--s1.end())-&gt;first)&#123;</span><br><span class="line">                <span class="keyword">if</span>(s1.count(b2))&#123;</span><br><span class="line">                    s1[b2]--;</span><br><span class="line">                    <span class="keyword">if</span>(!s1[b2]) s1.erase(b2);</span><br><span class="line">                    b2=<span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                b2*=<span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(b2==<span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(s1.count(b1))&#123;</span><br><span class="line">                s1[b1]--;</span><br><span class="line">                <span class="keyword">if</span>(!s1[b1]) s1.erase(b1);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            b1/=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">puts</span>(s1.size()||s1.size()&gt;<span class="number">1e4</span>?<span class="string">&quot;NO&quot;</span>:<span class="string">&quot;YES&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> _; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;_); <span class="keyword">while</span>(_--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1702G1-amp-G2-Passable-Paths"><a href="#1702G1-amp-G2-Passable-Paths" class="headerlink" title="1702G1&amp;G2: Passable Paths"></a>1702G1&amp;G2: Passable Paths</h3><p>已嘴待补</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan?invite_code=19q8g0m4dwk3l">https://cloud.tencent.com/developer/support-plan?invite_code=19q8g0m4dwk3l</a></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/w/">w</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/12/31/2021%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E8%85%90%E7%83%82%E3%80%81%E8%8B%8D%E7%A9%B9%E5%92%8C%E6%97%A0%E6%B3%95%E6%94%B9%E5%8F%98%E7%9A%84%E5%91%BD%E8%BF%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2021——腐烂、苍穹和无法改变的命运</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1703A-YES-or-YES"><span class="nav-number">1.</span> <span class="nav-text">1703A: YES or YES?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703B-ICPC-Balloons"><span class="nav-number">2.</span> <span class="nav-text">1703B: ICPC Balloons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703C-Cypher"><span class="nav-number">3.</span> <span class="nav-text">1703C: Cypher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703D-Double-Strings"><span class="nav-number">4.</span> <span class="nav-text">1703D: Double Strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703E-Mirror-Grid"><span class="nav-number">5.</span> <span class="nav-text">1703E: Mirror Grid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703F-Yet-Another-Problem-About-Pairs-Satisfying-an-Inequality"><span class="nav-number">6.</span> <span class="nav-text">1703F: Yet Another Problem About Pairs Satisfying an Inequality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1703G-Good-Key-Bad-Key"><span class="nav-number">7.</span> <span class="nav-text">1703G: Good Key, Bad Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702A-Round-Down-the-Price"><span class="nav-number">8.</span> <span class="nav-text">1702A: Round Down the Price</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702B-Polycarp-Writes-a-String-from-Memory"><span class="nav-number">9.</span> <span class="nav-text">1702B: Polycarp Writes a String from Memory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702C-Train-and-Queries"><span class="nav-number">10.</span> <span class="nav-text">1702C: Train and Queries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702D-Not-a-Cheap-String"><span class="nav-number">11.</span> <span class="nav-text">1702D: Not a Cheap String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702E-Split-Into-Two-Sets"><span class="nav-number">12.</span> <span class="nav-text">1702E: Split Into Two Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702F-Equate-Multisets"><span class="nav-number">13.</span> <span class="nav-text">1702F: Equate Multisets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1702G1-amp-G2-Passable-Paths"><span class="nav-number">14.</span> <span class="nav-text">1702G1&amp;G2: Passable Paths</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">15.</span> <span class="nav-text">其他</span></a></li></ol>
+    
+    </div>
+  </aside>
+ </section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/Friends" class="mobile-nav-link">Friends</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 V1n All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
